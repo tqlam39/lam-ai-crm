@@ -1,0 +1,13 @@
+runConfig:
+  minInstances: 0
+  maxInstances: 1
+  concurrency: 40
+  cpu: 1
+  memoryMiB: 512
+env:
+  - variable: GEMINI_API_KEY
+    secret: GEMINI_API_KEY
+    availability: [RUNTIME]
+  - variable: ALLOWED_FIREBASE_UIDS
+    secret: ALLOWED_FIREBASE_UIDS
+    availability: [RUNTIME]
