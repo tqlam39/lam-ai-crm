@@ -6,3 +6,19 @@ runConfig:
   concurrency: 40
   cpu: 1
   memoryMiB: 512
+env:
+  - variable: NEXT_PUBLIC_FIREBASE_API_KEY
+    value: AIzaSyANVpn2aCDd_bLLPh2faYa4w5M5bYDW2FQ
+    availability: [BUILD, RUNTIME]
+  - variable: NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
+    value: lam-ai-crm.firebaseapp.com
+    availability: [BUILD, RUNTIME]
+  - variable: NEXT_PUBLIC_FIREBASE_PROJECT_ID
+    value: lam-ai-crm
+    availability: [BUILD, RUNTIME]
+  - variable: NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET
+    value: lam-ai-crm.firebasestorage.app
+    availability: [BUILD, RUNTIME]
+  - variable: NEXT_PUBLIC_FIREBASE_APP_ID
+    value: 1:138109720564:web:fbe01acd1966b87cef0ba1
+    availability: [BUILD, RUNTIME]
