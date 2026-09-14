@@ -1,6 +1,0 @@
-'use client';
-import {useEffect,useState} from 'react';
-import {useParams} from 'next/navigation';
-import {getPublicCard,PublicCard} from '@/modules/share-card/public';
-import {directions,money} from '@/config';
-export default function Shared(){const {id}=useParams<{id:string}>();const [card,setCard]=useState<PublicCard|null>(null);const [loading,setLoading]=useState(true);useEffect(()=>{getPublicCard(id).then(setCard).catch(()=>{}).finally(()=>setLoading(false))},[id]);return <main style={{maxWidth:640,padding:'30px 20px'}}>{loading?<p>Đang mở thẻ bất động sản…</p>:!card?<div className="panel"><h1>Thẻ không khả dụng</h1><p>Link không tồn tại hoặc đã được thu hồi.</p></div>:<article className="panel"><p className="eyebrow">{card.brand}</p><img src={card.image} alt={card.title} style={{width:'100%',borderRadius:12}}/><h1 style={{marginTop:20}}>{card.title}</h1><p>{card.ward}, {card.province}</p><div className="detail-facts"><div>Kích thước<strong>{card.width} × {card.length} m</strong></div><div>Hướng<strong>{directions[card.direction]}</strong></div></div><p className="detail-price">{money(card.amount)}</p><a className="primary" href={'tel:'+card.phone}>Liên hệ {card.phone}</a></article>}</main>}

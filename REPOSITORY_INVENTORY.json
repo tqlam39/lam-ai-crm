@@ -1,0 +1,1145 @@
+{
+  "auditedAt": "2026-09-14T11:19:56.203Z",
+  "excluded": [
+    "dependencies",
+    "generated build output",
+    "git metadata",
+    "environment secrets"
+  ],
+  "files": [
+    {
+      "source": "lam-ai-crm",
+      "path": ".gitignore",
+      "bytes": 45,
+      "sha256": "25d56c398cf1c0f954f49fd9d1d83bd4c6376207c792d74f77f245629c878a9e"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "apphosting.yaml",
+      "bytes": 279,
+      "sha256": "9878ea03f85321b7ad2310cf15986f04f6283687a0de2764c81605653412a5b5"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "CHAY_APP.cmd",
+      "bytes": 170,
+      "sha256": "c865391245f493662b73b1fb0ed97b895f0b0fced4fd6a4d58aac17851382663"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "firebase.json",
+      "bytes": 114,
+      "sha256": "1f3bbaec9b24ebcc724290bdb4431f4289d867b1f924fb8436faf65a56e32ed3"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "firestore.indexes.json",
+      "bytes": 1837,
+      "sha256": "a9200e759a05387e4b453925de61d74ad5256ef2352993ed3c0e17e43b6702d2"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "firestore.rules",
+      "bytes": 2494,
+      "sha256": "9c0538920c3f0d9092be5e391094f6976df7c5b99721aa166920ac6269fe0dc2"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "HUONG_DAN.md",
+      "bytes": 18734,
+      "sha256": "81b773668571fa2fa488b2f37d4308d2814d8b40fd47566ad6e807c806ebfde9"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "MASTER_BLUEPRINT_V1.md",
+      "bytes": 29244,
+      "sha256": "1fac8d35f5bb4aaddfc869d7bc4a0baa4006f701360b875fddf2ef8f62522200"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "next-env.d.ts",
+      "bytes": 268,
+      "sha256": "f4e8976c19fc926644d72610bf1058bd6bf52add97e46a02bc0b912a751625c0"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "next.config.mjs",
+      "bytes": 143,
+      "sha256": "cf3bf729b8a0362abe7670355fce8cf9dcff4020c1d3a5a0bbfb53b733580e70"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "package-lock.json",
+      "bytes": 90727,
+      "sha256": "e65194d5f6cd5c3b0852f048ccf52d49166a1f2a3c291b07d35b75eddd486350"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "package.json",
+      "bytes": 617,
+      "sha256": "19c06ed04149cbf47013a9262801ad42d5aefb24c5f253c8776207ed167799a4"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "PROPERTY_DATA_CONTRACT_V1.1.md",
+      "bytes": 781,
+      "sha256": "9886ea93747876b43203acc229e93ddb37414aa3ac59aea1a8d480744fe1ce3e"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "PROPERTY_DATA_CONTRACT_V1.2.md",
+      "bytes": 719,
+      "sha256": "a1d74a7487708b46d679b08302420161307992d582500cab0f89025453b10062"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "public/favicon.svg",
+      "bytes": 183,
+      "sha256": "ae16c2fa80a9997ac849f8b50eec57d67bfd79bb4ca5c6ac7b67c89660e392d8"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "public/icon-192.png",
+      "bytes": 988,
+      "sha256": "1e248d1a2949fab9803523d6a509ede64dc853f6e7c0f738e44482f75295547c"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "public/icon-512.png",
+      "bytes": 3192,
+      "sha256": "c9d1c84693e9546de4e0f4abf5bae7afcc30692c4314e5733a0ef598fb210d90"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "public/manifest.webmanifest",
+      "bytes": 339,
+      "sha256": "8e26b71598481fbb4c6bdb0e3de7d57497cb535698e11728ddf497192e291755"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "public/offline.html",
+      "bytes": 675,
+      "sha256": "3a87eb3a10ba6800725a345c9b9143a135fe3bb0db6360ae30ba5261a3395af2"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "public/sample-property.svg",
+      "bytes": 389,
+      "sha256": "6de4e2d17d51b08454173a96a649b78fc3defdffcb08e744c6cf5fcbc5c11d9a"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "public/sw.js",
+      "bytes": 893,
+      "sha256": "96c5566ceaf0da2f1a686eb8029f5aadc9cbf1adf9857d7189490eac74cbafc6"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "scripts/build-serial.cjs",
+      "bytes": 599,
+      "sha256": "5e72cb283652bec262eb0441820f8c712b3756d66041c62a83d8881788e90ec6"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "scripts/test.cjs",
+      "bytes": 585,
+      "sha256": "a15994aa6d2b7695fbcacd531f1ce316c4812a946ba171c520c8f8d88bda5d3b"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "server.mjs",
+      "bytes": 292,
+      "sha256": "2bb48a4396924e894b706196294a6ebdea586d2bdcc87130472c155cad069f56"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/app/api/ai/config/route.ts",
+      "bytes": 2641,
+      "sha256": "fdf8e8b23b0ff91618d90293db0eefbb11744905c0ddd99a38521489df9bfdbe"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/app/api/ai/route.ts",
+      "bytes": 4618,
+      "sha256": "9c75041d69e621c7bcd9408cce9c62722f49e72e82e5d2d313ff436ebf93c4ef"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/app/api/intake/link/route.ts",
+      "bytes": 1099,
+      "sha256": "199fe23f4186addd30a6299a424a2279c857659df848ee76422a3de44cc22d9f"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/app/globals.css",
+      "bytes": 28121,
+      "sha256": "0dcdf72c9b696d777e40bb08cbe84a59c49fe514c950ffeb3b090e815c106bc9"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/app/layout.tsx",
+      "bytes": 711,
+      "sha256": "775e48979d08b688d0de6b4beef39282d6009ff77553be684c0c6ca02087b1a4"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/app/page.tsx",
+      "bytes": 7636,
+      "sha256": "bbca03b32f8bcc0597f7ed709c7d6749972c94d1e17e82c1a162785d36eb98a5"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/app/share/[id]/page.tsx",
+      "bytes": 1264,
+      "sha256": "e2c2e32d1592aa7f9380a4d01b7c1000ab6dfcbc3f0ce813ce175c3a6a3189e7"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/components/forms/PriceInput.tsx",
+      "bytes": 936,
+      "sha256": "348ce0c03eaee5badd7b8489342887918579fa7f98fc3ef471b5ae7e8efc062b"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/components/ui/index.tsx",
+      "bytes": 1665,
+      "sha256": "88725cf2b0164cf2b6b2476aa15ccc644a2da1dad359a7decf653ecb98d21c3b"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/config/index.ts",
+      "bytes": 1178,
+      "sha256": "99a31f790c5f9ce55fad9ac9cc20ee14224a0fc678fc2bc0c05d654d06eb1261"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/domain/customer-care.ts",
+      "bytes": 2995,
+      "sha256": "6a96e1659269075fceb53c656adf93440805d39383843da6fb586a41aedf439d"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/domain/customer-matching.ts",
+      "bytes": 835,
+      "sha256": "c682ef854211a89e4c72fb870912e67c1ba2e656146c864e37922d284b6f7a45"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/domain/customer-needs.ts",
+      "bytes": 1269,
+      "sha256": "9f37c8547bb35ecbafd2b1539cf89b435b4d934581ada5e76da072708d7a2efa"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/domain/engines.ts",
+      "bytes": 4686,
+      "sha256": "61c741b34235015ef26620575921435ae8f430b5767fac6d6f78a158c3cd529b"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/domain/match-recommendation.ts",
+      "bytes": 241,
+      "sha256": "f2117fe2ddc0ac2ee476a98fd4c31c883c8128cae0dbdf1adfd36116a17d6ffa"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/domain/models.ts",
+      "bytes": 4184,
+      "sha256": "c0237b1bc1ccaeb1b60e44738ae2fb53434a7c0972a2716887497246f808fb16"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/domain/price-range.ts",
+      "bytes": 167,
+      "sha256": "71f3dab1b64c311cf3b444c8e6bfc43827a6757b1925e5b28ae37f40a26543c9"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/domain/property-intake.ts",
+      "bytes": 882,
+      "sha256": "54b7ffb5ee9d5871d3b063d129f6aa4925c5601810289c848ef9f296ce0ad037"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/domain/property-price.ts",
+      "bytes": 700,
+      "sha256": "25ee5ef344c0667e8cc1a07bfa3eb5afda4ce778a08f6d6ea18e95bd5b759be1"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/modules/ai-copilot/index.tsx",
+      "bytes": 8304,
+      "sha256": "8302306fe479b6f243f6370c9728fa004a97f6c73ab3480c5f1652daa2a698b6"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/modules/customers/CustomerCare.tsx",
+      "bytes": 4945,
+      "sha256": "039d674a29309b782fe3f685cce75fb9b5817ef93055f02c47199be620421dcb"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/modules/customers/CustomerMatches.tsx",
+      "bytes": 3111,
+      "sha256": "4e8851b85bfa0b547e5bf65ccdaa129d0152f9460984ae736b33dc00d7abc6c9"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/modules/customers/CustomerNeedFields.tsx",
+      "bytes": 2650,
+      "sha256": "b6e37963584f833f4a0c40d1a76ed8ede97a35bb03fa416859f6a9118eccf198"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/modules/customers/index.tsx",
+      "bytes": 12808,
+      "sha256": "a051e392b461cfa5b9fdd465e12b7a05afaa62a997bb9d46ec5d2504c634431e"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/modules/dashboard/index.tsx",
+      "bytes": 6097,
+      "sha256": "5b69bd9844da43c08bd9c1ce14c43411724e103d0d845b6fdcd0f085334a9795"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/modules/matching/index.tsx",
+      "bytes": 3087,
+      "sha256": "6bae04c9bf293e0d38666664f90419780a44fd20580ee3135a8ab6d8e96d17b5"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/modules/properties/form.tsx",
+      "bytes": 10033,
+      "sha256": "b5e8b6c18e2cba63f5a090197b32456ab667d5eee7397337487758d1de9c15d1"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/modules/properties/index.tsx",
+      "bytes": 11955,
+      "sha256": "62fe7a3563145fa1486b83618e2ebebf128f1754a75da684a324e392997d3fca"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/modules/settings/AISettings.tsx",
+      "bytes": 3455,
+      "sha256": "1e5846b07bd9db75647c0a3eb3123cae6e1c1e3c04ababff5b04d4fc1effaa27"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/modules/settings/index.tsx",
+      "bytes": 7943,
+      "sha256": "0515dc5fc7d2488a4e789e5b7a7fc99224225362e44519c1a7ab7f81b434a05f"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/modules/share-card/public.ts",
+      "bytes": 1394,
+      "sha256": "ec290c5cfbac50d6ab63152f4f863f2cf997669dfba9e8e2149b6ff40a25f2f5"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/modules/share-card/service.ts",
+      "bytes": 2522,
+      "sha256": "a7bf207743cfd849c7f232e4bb7432047b55c5f461f2b1bb2ea3455dfce9a4b9"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/modules/tasks/index.tsx",
+      "bytes": 6069,
+      "sha256": "16e39f282f884696ebe16f3ba3138d4432e27bf4e885acb9660e276a7cb02ad5"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/services/ai/client.ts",
+      "bytes": 546,
+      "sha256": "d19fa73d6d2e4a1e6ea4a8b912fa30f2e432afdfbaab20ca6adfa6a0f6b3dd8b"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/services/ai/groq-models.ts",
+      "bytes": 1014,
+      "sha256": "2a45bd1b0615fd61222fcb284ec62d83f0beee7b6c2dd6cdc6939200f28ebcac"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/services/ai/provider.ts",
+      "bytes": 2508,
+      "sha256": "eaed8dcaaa05dbbe629a91f091ad208e93cf531d5c47712422b6c34f66868897"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/services/ai/session.ts",
+      "bytes": 2002,
+      "sha256": "233460d70815e2d440d503ec2fcc81aff7a223ef588b686b84424c9b6632b553"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/services/firebase/client.ts",
+      "bytes": 1189,
+      "sha256": "f25c3105d77b4caaa927373cdcc4afb758c0fdca1d9707c6240c0e48758b4e94"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/services/gemini/index.ts",
+      "bytes": 1090,
+      "sha256": "6e189212028323ad1fc595c0fdcd841f78d5aefca3b47182f2f3ef4a50c5b670"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/services/intake/client.ts",
+      "bytes": 1399,
+      "sha256": "dd2d347f693fbe38127dadacebadf812b0954c50c3bdb207dc4558ab4e88549f"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/services/intake/public-link.ts",
+      "bytes": 5583,
+      "sha256": "a14551657b0018022286951d692d163102e812b0381a71eb8cdbf864c05bc53a"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/services/intake/useVoiceIntake.ts",
+      "bytes": 1771,
+      "sha256": "d1e4c9eb4f0fa3c35ea315a53436f86c504910344a92ee6bed79817b7fbaed76"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/services/media/index.ts",
+      "bytes": 1043,
+      "sha256": "887f385ab991db2314916ec1c8044680c50954aceba056def15cf1365816e814"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/services/repository/context.tsx",
+      "bytes": 2867,
+      "sha256": "95771e4a907881dda02c2a6a705b9d38cfc2374e2f5f48b0c469227929b11523"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/services/repository/demo.ts",
+      "bytes": 2101,
+      "sha256": "de562f6b06147b8b635030ca22e10d67159da856a5a70b45e0a41c28e2b77b45"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "src/services/repository/index.ts",
+      "bytes": 3753,
+      "sha256": "f3b1aabc0eafc836d3498c78ff503164a5bdaf6c3420da271db478af27bf32fd"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "storage.rules",
+      "bytes": 434,
+      "sha256": "47fb9384e0a98a0823fa605589b0db08ab03d421bf473bc271729836a3765b2d"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "tests/domain.test.ts",
+      "bytes": 17609,
+      "sha256": "c9502b8e463972264c329d555e50f5844b97c39e5cb5033233e30d12a740f5dc"
+    },
+    {
+      "source": "lam-ai-crm",
+      "path": "tsconfig.json",
+      "bytes": 450,
+      "sha256": "62b4cf6e92eb0e91250e6807de950f48b8d3b8d35a3c8dfd69ea467b44f06836"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": ".github/workflows/android.yml",
+      "bytes": 934,
+      "sha256": "7af3396ff4e4f7c5ee599f3c3ad791af94b2983252f1aa437fe7dc4490439748"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": ".gitignore",
+      "bytes": 155,
+      "sha256": "a6c28084361da76787b7105df92233141d36b5ab464723b2f226c13786c2e6be"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/.gitignore",
+      "bytes": 1824,
+      "sha256": "065e4a92a240fe11a0ea230491ad9dabef143f5fd5a3e6884ad6f0395666a971"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/.gitignore",
+      "bytes": 26,
+      "sha256": "99c54e51ee601a60fbde8016b2cbf717483bc2e92773be86c9247d02a7fa6ea4"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/build.gradle",
+      "bytes": 2140,
+      "sha256": "cd376bd59a3fc8057b797600f84c2cc30bba5c7de87d5e8dca5edd8007706cd3"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/proguard-rules.pro",
+      "bytes": 751,
+      "sha256": "1cf8c57e8f79c250b0af9c1a5a4edad71a5c348a79ab70243b6bae086c150ad2"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/androidTest/java/com/getcapacitor/myapp/ExampleInstrumentedTest.java",
+      "bytes": 774,
+      "sha256": "ff50b4c110a7434312f9af54171f9e8523b015836f707c9b387b76d4c38a97f8"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/AndroidManifest.xml",
+      "bytes": 1751,
+      "sha256": "d00a87b56980794bc6796cb494b2bf98f258642a95a5933b30615059a20d6b3b"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/java/com/tqlam39/lamaicrm/MainActivity.java",
+      "bytes": 311,
+      "sha256": "f9bb5e713171d603724bcc5fc6cb5eb48e3f96d5f9620185db650cc5a3cf2cc8"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/java/com/tqlam39/lamaicrm/NativeCRMPlugin.java",
+      "bytes": 18180,
+      "sha256": "9cd9bcb43090b2ae350622fdc5dcf7e37adf42b255a13d69b2af57e5fd7311e6"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/res/drawable/ic_launcher_background.xml",
+      "bytes": 5606,
+      "sha256": "718ba51adf166bb55c3e9936bb8199a0148457f7f0191aaa2f37a94f3159d6ec"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/res/drawable/splash.png",
+      "bytes": 4040,
+      "sha256": "5cf98b4451bd99b20df26f9e608a46946118be6b0ae90762f9ca1786a30c76ff"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/res/drawable-land-hdpi/splash.png",
+      "bytes": 7705,
+      "sha256": "08cc34ad7713fe7ed58bceaa37b2387b670c53cd60264b4bd6442db3098e75dc"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/res/drawable-land-mdpi/splash.png",
+      "bytes": 4040,
+      "sha256": "5cf98b4451bd99b20df26f9e608a46946118be6b0ae90762f9ca1786a30c76ff"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/res/drawable-land-xhdpi/splash.png",
+      "bytes": 9251,
+      "sha256": "22f87e1e3bc89aa01a7dbc39c9a4db058cd0bf4ad3fe9f55712bf69eb997f4bf"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/res/drawable-land-xxhdpi/splash.png",
+      "bytes": 13984,
+      "sha256": "42aa26392546fcdee1b8d3ac6d4b41bfcceb41dc6a4f3a3c30c24a8a8f4db862"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/res/drawable-land-xxxhdpi/splash.png",
+      "bytes": 17683,
+      "sha256": "60393ce8636fd263e4e1fea3fd4ab2de948c6295e898fda9b50ac4e5283be809"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/res/drawable-port-hdpi/splash.png",
+      "bytes": 7934,
+      "sha256": "c5015f4ba3628392b538386c5e210f0b94f352a3160adab934fd0311972137ca"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/res/drawable-port-mdpi/splash.png",
+      "bytes": 4096,
+      "sha256": "07fa579e1c83e04ba7f9cbcbfcf41b68e15fe3638f2c44a04e58b809103e6b69"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/res/drawable-port-xhdpi/splash.png",
+      "bytes": 9875,
+      "sha256": "b73049cb37fe76d6c11b87a796766bf6af0c85483b31eb6a921657b0d764a4b9"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/res/drawable-port-xxhdpi/splash.png",
+      "bytes": 13346,
+      "sha256": "0c7f1212f25b7b90e9a6e1d320013e4ff3d3e03e634cbb07b7b7981cac51627f"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/res/drawable-port-xxxhdpi/splash.png",
+      "bytes": 17489,
+      "sha256": "3db071a03b2f8ffe0dfd4170fc59842d53cd15bba5e88af59401d58efabf7827"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/res/drawable-v24/ic_launcher_foreground.xml",
+      "bytes": 1880,
+      "sha256": "a8514094f754b099d3e55ce1d6e0b2de79db418b2eeacb0fc2a6bb0bfadef221"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/res/layout/activity_main.xml",
+      "bytes": 535,
+      "sha256": "5d770feb791313b947020cbfc57e5c733c556dac5e9e49261a1190e527073253"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml",
+      "bytes": 265,
+      "sha256": "9c3a7e0a6515c6e1a7ae834a9ae430311ebc3241f7b2e5e7f0460aa690709a7c"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml",
+      "bytes": 265,
+      "sha256": "9c3a7e0a6515c6e1a7ae834a9ae430311ebc3241f7b2e5e7f0460aa690709a7c"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "bytes": 2786,
+      "sha256": "72b71c3581ca3b5a23b1c168d69b9d855b3f184fa079902a01f088eb4f0607d5"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png",
+      "bytes": 3450,
+      "sha256": "32baa10d2632a4417454a579f992bd640e0a3cec79321423559b2c9940de58a9"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png",
+      "bytes": 4341,
+      "sha256": "bfcc1b0fa931b14bb241372c76ab4f04374b67d02363c98d9cb12edfdacdf5f3"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/res/mipmap-mdpi/ic_launcher.png",
+      "bytes": 1869,
+      "sha256": "27ed3603010ebc278f64f8645741ab132ff517abb5308eb9df6c8e42a48956b2"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png",
+      "bytes": 2110,
+      "sha256": "58e78a618778926b1f6d9472a6468de878de8530970934e94aab5ba4ba08cc00"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png",
+      "bytes": 2725,
+      "sha256": "0166fc333074c373fbd0ce6b5defd71552166165ac778121ca9c9dff6b83f0fc"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/res/mipmap-xhdpi/ic_launcher.png",
+      "bytes": 3981,
+      "sha256": "d35dbfff175b83c13ef59cf924abfc810f7b6a158595d7417c5498ea8c7c7ed1"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png",
+      "bytes": 5036,
+      "sha256": "6f88083b8166cc559102f7044688de7525287632ebe09ac45d001ac8bf4b3eae"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png",
+      "bytes": 6593,
+      "sha256": "40911a00922868686854a4804b93fd6e56b503664696de03f450bff690affb6d"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+      "bytes": 6644,
+      "sha256": "ed346eb1e3f0280f15709393705899b3ff55c20b88f4e0308006b3c33cf5fe14"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png",
+      "bytes": 9793,
+      "sha256": "4a82bc1e9923576275869998925ce0ae021a79aa18b24a0dd87ad6b61ca85053"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png",
+      "bytes": 10455,
+      "sha256": "1ee4cd9ff371dcb2e3938097e434f6fb8731688ed7165e61fc63693ad5b2f455"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+      "bytes": 9441,
+      "sha256": "87cb2f2ffe992652bb4fa768c73719a37b5852ab17fbf8e170e888f7a42b0761"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png",
+      "bytes": 15529,
+      "sha256": "bd24fd383253bf8d43f0a81f11c071d76d1d555114376dd647cd9fb38fa0a9da"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png",
+      "bytes": 15916,
+      "sha256": "ab93096331e7cd8ec379f73f1e9adcaaa9ee1115c9f4ff10411a811fb9700174"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/res/values/ic_launcher_background.xml",
+      "bytes": 120,
+      "sha256": "cd40bafe618ff506f4088778b135cb4faa15f25e0c9b475e22d730c74b7be115"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/res/values/strings.xml",
+      "bytes": 304,
+      "sha256": "2f2035f15ae5801937bc34af0b4bb86cb736e53f11ae9d2c54bb5043dae97acd"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/res/values/styles.xml",
+      "bytes": 823,
+      "sha256": "18ebba36575e9461347ee67361b23caf095f158ee85dbefe1b83a4669ba5bd6c"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/res/xml/data_extraction_rules.xml",
+      "bytes": 525,
+      "sha256": "b525f498fda52474055b34e90999d9d8b337b3b61844d9cd76bc87fc3d44f6ba"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/main/res/xml/file_paths.xml",
+      "bytes": 213,
+      "sha256": "a46ed43ef65c90cb6778f4581decf3556e3f0055aad8f36d69dae16f9a0e99aa"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/app/src/test/java/com/getcapacitor/myapp/ExampleUnitTest.java",
+      "bytes": 402,
+      "sha256": "d4045ae8fac1f0807e6b24eb34e68409a9a235df9d1a3f896fb8c9a49424363d"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/build.gradle",
+      "bytes": 637,
+      "sha256": "46ade7db7afeb8049ccea59fce83095dca736ceb8c9acd79cc944e988c3357d9"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/gradle/wrapper/gradle-wrapper.jar",
+      "bytes": 43764,
+      "sha256": "7d3a4ac4de1c32b59bc6a4eb8ecb8e612ccd0cf1ae1e99f66902da64df296172"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/gradle/wrapper/gradle-wrapper.properties",
+      "bytes": 253,
+      "sha256": "9a479a85aa879bb55284fc16d0de5b81a745c3854f4e2d88c42e7debaf007435"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/gradle.properties",
+      "bytes": 987,
+      "sha256": "3bab15c5b8bc4c2f4b6cf525497d15ad4abca53a460e6dd2eb0f0135817d31e6"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/gradlew",
+      "bytes": 8733,
+      "sha256": "b187b4c52e749f5760afdd6fadc31b2a98ad35fb249bf0dff03b72650f320409"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/gradlew.bat",
+      "bytes": 2937,
+      "sha256": "1d297e00bd21de3ace22b4d7f2de1f9dfa858883d66bbf7c1ccbecccec8f4f3b"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/settings.gradle",
+      "bytes": 208,
+      "sha256": "6ce098d15ebd69b44c4ecd786bca1bdc366340d2459b2af4d7bb0ab317aa9669"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "android/variables.gradle",
+      "bytes": 498,
+      "sha256": "83d502c9ed8fcf1dd4791482067abeedbebae49fafe9cd14a8a1f5891deb0d88"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "CAI_DAT_ANDROID.md",
+      "bytes": 2150,
+      "sha256": "1522dd8278212ab43553a60f8b46b726bb715e740cfb702954a33af4c4c7edf8"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "capacitor.config.ts",
+      "bytes": 293,
+      "sha256": "1e3c8be569be723e1781507fd1f66a70589d89cdbcefa9d0581b4f5002cbf378"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "index.html",
+      "bytes": 324,
+      "sha256": "96bb95e36031670def7fb46812ef879280bc1b498e9128166c7f86ff8aa50f30"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "package-lock.json",
+      "bytes": 83214,
+      "sha256": "6516bb7d31cb46d8d221e8370aea983db7fd2df53190ca501fc7c375e8078bc8"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "package.json",
+      "bytes": 837,
+      "sha256": "a408395d160e7f2e331cbec0a7b9ad5dac6b8a31125d8e979ad9082f67705ac7"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "public/favicon.svg",
+      "bytes": 183,
+      "sha256": "ae16c2fa80a9997ac849f8b50eec57d67bfd79bb4ca5c6ac7b67c89660e392d8"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "public/icon-192.png",
+      "bytes": 988,
+      "sha256": "1e248d1a2949fab9803523d6a509ede64dc853f6e7c0f738e44482f75295547c"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "public/icon-512.png",
+      "bytes": 3192,
+      "sha256": "c9d1c84693e9546de4e0f4abf5bae7afcc30692c4314e5733a0ef598fb210d90"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "public/manifest.webmanifest",
+      "bytes": 339,
+      "sha256": "8e26b71598481fbb4c6bdb0e3de7d57497cb535698e11728ddf497192e291755"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "public/offline.html",
+      "bytes": 675,
+      "sha256": "3a87eb3a10ba6800725a345c9b9143a135fe3bb0db6360ae30ba5261a3395af2"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "public/sample-property.svg",
+      "bytes": 389,
+      "sha256": "6de4e2d17d51b08454173a96a649b78fc3defdffcb08e744c6cf5fcbc5c11d9a"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "public/sw.js",
+      "bytes": 893,
+      "sha256": "96c5566ceaf0da2f1a686eb8029f5aadc9cbf1adf9857d7189490eac74cbafc6"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "README.md",
+      "bytes": 2964,
+      "sha256": "58cf4bf60f39b730e7ffedb0bb330c6a706ef5962adbc613bae3a05027cd9a67"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "scripts/test.cjs",
+      "bytes": 586,
+      "sha256": "451054798bd898ced0a7e85439e59011c5986b214bcb1e20713efb0548f43f19"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/app/globals.css",
+      "bytes": 28121,
+      "sha256": "0dcdf72c9b696d777e40bb08cbe84a59c49fe514c950ffeb3b090e815c106bc9"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/app/page.tsx",
+      "bytes": 7500,
+      "sha256": "d91d212119cdafeb427eb3a5a168558c1b963a207583ece3ae73fafb75067e37"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/components/forms/PriceInput.tsx",
+      "bytes": 936,
+      "sha256": "348ce0c03eaee5badd7b8489342887918579fa7f98fc3ef471b5ae7e8efc062b"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/components/ui/index.tsx",
+      "bytes": 1665,
+      "sha256": "88725cf2b0164cf2b6b2476aa15ccc644a2da1dad359a7decf653ecb98d21c3b"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/config/index.ts",
+      "bytes": 1178,
+      "sha256": "99a31f790c5f9ce55fad9ac9cc20ee14224a0fc678fc2bc0c05d654d06eb1261"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/domain/backup.ts",
+      "bytes": 1927,
+      "sha256": "2e2d0750bef15459087ae68fb493898e8750e54ddb88a1e0c1271f8eafd1f63b"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/domain/customer-care.ts",
+      "bytes": 2995,
+      "sha256": "6a96e1659269075fceb53c656adf93440805d39383843da6fb586a41aedf439d"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/domain/customer-matching.ts",
+      "bytes": 835,
+      "sha256": "c682ef854211a89e4c72fb870912e67c1ba2e656146c864e37922d284b6f7a45"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/domain/customer-needs.ts",
+      "bytes": 1269,
+      "sha256": "9f37c8547bb35ecbafd2b1539cf89b435b4d934581ada5e76da072708d7a2efa"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/domain/engines.ts",
+      "bytes": 4686,
+      "sha256": "61c741b34235015ef26620575921435ae8f430b5767fac6d6f78a158c3cd529b"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/domain/match-recommendation.ts",
+      "bytes": 241,
+      "sha256": "f2117fe2ddc0ac2ee476a98fd4c31c883c8128cae0dbdf1adfd36116a17d6ffa"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/domain/models.ts",
+      "bytes": 4184,
+      "sha256": "c0237b1bc1ccaeb1b60e44738ae2fb53434a7c0972a2716887497246f808fb16"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/domain/price-range.ts",
+      "bytes": 167,
+      "sha256": "71f3dab1b64c311cf3b444c8e6bfc43827a6757b1925e5b28ae37f40a26543c9"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/domain/property-intake.ts",
+      "bytes": 882,
+      "sha256": "54b7ffb5ee9d5871d3b063d129f6aa4925c5601810289c848ef9f296ce0ad037"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/domain/property-price.ts",
+      "bytes": 700,
+      "sha256": "25ee5ef344c0667e8cc1a07bfa3eb5afda4ce778a08f6d6ea18e95bd5b759be1"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/main.tsx",
+      "bytes": 279,
+      "sha256": "adfcb02d388d1bd75362c59736a72aa992d4635ad59c304f11b038aab41edd52"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/modules/ai-copilot/index.tsx",
+      "bytes": 8221,
+      "sha256": "30dc2a875c8615d7741333b9906f67d63b0b8e58c6d035d401b9ddc055be4750"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/modules/customers/CustomerCare.tsx",
+      "bytes": 4945,
+      "sha256": "039d674a29309b782fe3f685cce75fb9b5817ef93055f02c47199be620421dcb"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/modules/customers/CustomerMatches.tsx",
+      "bytes": 3111,
+      "sha256": "4e8851b85bfa0b547e5bf65ccdaa129d0152f9460984ae736b33dc00d7abc6c9"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/modules/customers/CustomerNeedFields.tsx",
+      "bytes": 2650,
+      "sha256": "b6e37963584f833f4a0c40d1a76ed8ede97a35bb03fa416859f6a9118eccf198"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/modules/customers/index.tsx",
+      "bytes": 12808,
+      "sha256": "a051e392b461cfa5b9fdd465e12b7a05afaa62a997bb9d46ec5d2504c634431e"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/modules/dashboard/index.tsx",
+      "bytes": 6097,
+      "sha256": "5b69bd9844da43c08bd9c1ce14c43411724e103d0d845b6fdcd0f085334a9795"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/modules/matching/index.tsx",
+      "bytes": 3087,
+      "sha256": "6bae04c9bf293e0d38666664f90419780a44fd20580ee3135a8ab6d8e96d17b5"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/modules/properties/form.tsx",
+      "bytes": 10270,
+      "sha256": "3813634c4e9683e44049fdc505d4e884b229f345bd62ab2c68bd421213c0ab22"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/modules/properties/index.tsx",
+      "bytes": 12090,
+      "sha256": "300dfae4addb6ba11c14d6858a2671178d606ed8ca3e44c4bd667a098b2b6a7f"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/modules/settings/AISettings.tsx",
+      "bytes": 3455,
+      "sha256": "98c8887596cf3104b1d1358373ac3c2fcf2e13d3fea8190b7f5dd2d9b870a52e"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/modules/settings/index.tsx",
+      "bytes": 6841,
+      "sha256": "4fadd07eda9dc86c769e3b19083c739fc20f226a6ac0898ec5b1c48139315b71"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/modules/share-card/public.ts",
+      "bytes": 245,
+      "sha256": "9c59bb8b6e71d8ed1f1dca1c650ca989ec95048cc48861c39567447df394158d"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/modules/share-card/service.ts",
+      "bytes": 2939,
+      "sha256": "443c8d6f633336cad7e8642d9ac78311cb7ad7c5bd9b8071542dfb1e259dcdb1"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/modules/tasks/index.tsx",
+      "bytes": 6069,
+      "sha256": "16e39f282f884696ebe16f3ba3138d4432e27bf4e885acb9660e276a7cb02ad5"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/native/bridge.ts",
+      "bytes": 509,
+      "sha256": "eefb038a89b0532438892aa97b86a9f25df3eaf14ce462e5f2f9a4479ca416e0"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/native/camera.ts",
+      "bytes": 440,
+      "sha256": "93275d5eeaf5f46affc78c19d9fd53bd13edffab9a524086734b126b331e5a29"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/services/ai/client.ts",
+      "bytes": 1889,
+      "sha256": "b7a73bec0e28f364a8a383ea5470404481daf663d4e0392f4e8c51fa6353b547"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/services/ai/groq-models.ts",
+      "bytes": 1014,
+      "sha256": "2a45bd1b0615fd61222fcb284ec62d83f0beee7b6c2dd6cdc6939200f28ebcac"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/services/ai/instructions.ts",
+      "bytes": 2043,
+      "sha256": "bada124002c70e7dfd4d3ffd7e456a15a5373a3a1bc496772dbfc5725eb45a44"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/services/ai/provider.ts",
+      "bytes": 2508,
+      "sha256": "eaed8dcaaa05dbbe629a91f091ad208e93cf531d5c47712422b6c34f66868897"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/services/ai/session.ts",
+      "bytes": 95,
+      "sha256": "f1b83587abc543bf5b2a2d124adc8727cb8b45e4b5742023516463239f698a04"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/services/gemini/index.ts",
+      "bytes": 736,
+      "sha256": "7684a2635d50aa4ee3211beb1cb32891cb99cd55ba7b4a6d30a0a4aed697b54c"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/services/intake/client.ts",
+      "bytes": 1309,
+      "sha256": "e1dc2282f83197162d9b7d06f91c0ecab60c065af872fb4b93a6e7d2d40aad06"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/services/intake/useVoiceIntake.ts",
+      "bytes": 2039,
+      "sha256": "7e293243e08595fe89fb6d7a53bd78711fc93da5dee682117a4451437bcc873d"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/services/media/index.ts",
+      "bytes": 622,
+      "sha256": "b536efea15f6ca824b33e108fa4726e3299115ce466f94e990d6cbd7ae580d8b"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/services/repository/context.tsx",
+      "bytes": 2280,
+      "sha256": "487a836e4716ed4628e70a0d1fe1c5edd1e9a0a73f01cc991d766ae42f0e99bd"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/services/repository/demo.ts",
+      "bytes": 2101,
+      "sha256": "de562f6b06147b8b635030ca22e10d67159da856a5a70b45e0a41c28e2b77b45"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "src/services/repository/index.ts",
+      "bytes": 696,
+      "sha256": "823880811c1f3c877e0359f4731e0aff5709649e051cdf7be0d0644bdb140021"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "tests/android.test.ts",
+      "bytes": 2801,
+      "sha256": "73e2673c26ff74c6cb9770b1563506a7f647180e50b9aa71fda81d4280e4da97"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "tsconfig.json",
+      "bytes": 503,
+      "sha256": "62ecedee21379ee74058019cbc21d1be31d5635ae907024c737249897bd17c90"
+    },
+    {
+      "source": "lam-ai-crm-android",
+      "path": "vite.config.ts",
+      "bytes": 228,
+      "sha256": "577b35aaf1428d9c8868977af32627957af14f8550450ecc2f830332174c1e81"
+    }
+  ]
+}
