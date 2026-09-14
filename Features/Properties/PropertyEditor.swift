@@ -11,9 +11,20 @@ struct PropertyEditor: View {
     @State private var duplicates:[PropertyLogic.Duplicate] = []
     @State private var confirm = false
     @State private var oldProperty:CRMRecord?
+    @State private var rawNumbers:[String:String] = [:]
+    @State private var invalidNumbers:Set<String> = []
     private func text(_ path:String)->Binding<String> {Binding(get:{record.text(path)},set:{record[path] = .string($0)})}
-    private func numeric(_ path:String)->Binding<String> {Binding(get:{record[path].decimal.map{NSDecimalNumber(decimal:$0).stringValue.replacingOccurrences(of:".",with:",")} ?? ""},set:{record[path] = Decimal(string:$0.replacingOccurrences(of:",",with:"."),locale:Locale(identifier:"en_US_POSIX")).map(JSONValue.number) ?? .null})}
-    private func money(_ path:String)->Binding<String> {Binding(get:{Money.billions(record[path].decimal)},set:{do {record[path] = try Money.vnd(fromBillions:$0).map(JSONValue.number) ?? .null;error = ""}catch{self.error = error.localizedDescription;record[path] = .null}})}
+    private func numeric(_ path:String)->Binding<String> {Binding(get:{rawNumbers[path] ?? record[path].decimal.map{NSDecimalNumber(decimal:$0).stringValue.replacingOccurrences(of:".",with:",")} ?? ""},set:{input in
+        rawNumbers[path] = input
+        let valid = input.isEmpty || input.range(of:#"^-?\d*([.,]\d*)?$"#,options:.regularExpression) != nil
+        let value = valid ? Decimal(string:input.replacingOccurrences(of:",",with:"."),locale:Locale(identifier:"en_US_POSIX")) : nil
+        record[path] = value.map(JSONValue.number) ?? .null
+        if !input.isEmpty && value == nil {invalidNumbers.insert(path)}else{invalidNumbers.remove(path)}
+    })}
+    private func money(_ path:String)->Binding<String> {Binding(get:{rawNumbers[path] ?? Money.billions(record[path].decimal)},set:{input in
+        rawNumbers[path] = input
+        do {record[path] = try Money.vnd(fromBillions:input).map(JSONValue.number) ?? .null;invalidNumbers.remove(path)}catch{invalidNumbers.insert(path);record[path] = .null}
+    })}
     private func flag(_ path:String)->Binding<Bool> {Binding(get:{record[path].bool ?? false},set:{record[path] = .bool($0)})}
     var body:some View {
         Form {
@@ -115,6 +126,7 @@ struct PropertyEditor: View {
     private func save() {
         do {
             error = ""
+            if !invalidNumbers.isEmpty {throw CRMError.invalid("Có số chưa hợp lệ. Kiểm tra các ô giá và kích thước.")}
             var prepared = record;prepared["updatedAt"] = .string(Database.now)
             if ["LAND","AGRICULTURAL_LAND"].contains(prepared.text("type")){prepared["bedrooms"] = .number(0)}
             try Validation.property(prepared);record = PropertyLogic.normalize(prepared)
