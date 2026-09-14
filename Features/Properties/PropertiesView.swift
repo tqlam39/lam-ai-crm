@@ -3,8 +3,15 @@ import SwiftUI
 struct PropertiesView: View {
     @EnvironmentObject var store:CRMStore
     @State private var query = ""
-    @State private var type = "",status = "",ward = "",direction = "",transaction = ""
-    @State private var minPrice = "",maxPrice = "",minArea = "",bedrooms = ""
+    @State private var type = ""
+    @State private var status = ""
+    @State private var ward = ""
+    @State private var direction = ""
+    @State private var transaction = ""
+    @State private var minPrice = ""
+    @State private var maxPrice = ""
+    @State private var minArea = ""
+    @State private var bedrooms = ""
     @State private var drafts = false
     @State private var filters = false
     var items:[CRMRecord] {
