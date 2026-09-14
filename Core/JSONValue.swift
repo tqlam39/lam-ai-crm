@@ -30,6 +30,11 @@ enum JSONValue: Codable, Equatable, Sendable {
     var bool: Bool? { if case .bool(let v) = self { return v }; return nil }
     var array: [JSONValue] { if case .array(let v) = self { return v }; return [] }
     var object: [String: JSONValue] { if case .object(let v) = self { return v }; return [:] }
+    func merging(_ newer: JSONValue) -> JSONValue {
+        guard case .object(var old) = self, case .object(let changes) = newer else {return newer}
+        for (key,value) in changes {old[key] = old[key]?.merging(value) ?? value}
+        return .object(old)
+    }
     subscript(_ path: String) -> JSONValue {
         get { path.split(separator: ".").reduce(self) { $0.object[String($1)] ?? .null } }
         set {

@@ -23,4 +23,17 @@ final class LaunchTests: XCTestCase {
         app.buttons["tab-AI"].tap()
         XCTAssertTrue(app.navigationBars["AI Copilot"].exists)
     }
+    func testPropertyDraftPersistsAcrossLaunch() {
+        let app = XCUIApplication();app.launch()
+        XCTAssertTrue(app.buttons["quickAdd"].waitForExistence(timeout:45))
+        app.buttons["quickAdd"].tap();app.buttons["BĐS thủ công"].tap()
+        let title = app.textFields["property-title"]
+        XCTAssertTrue(title.waitForExistence(timeout:10));title.tap();title.typeText("Ban nhap iOS")
+        app.buttons["toolbar-save-draft"].tap()
+        XCTAssertTrue(app.navigationBars["Quỹ bất động sản"].waitForExistence(timeout:10))
+        app.terminate();app.launch()
+        XCTAssertTrue(app.buttons["tab-BĐS"].waitForExistence(timeout:45));app.buttons["tab-BĐS"].tap()
+        app.switches["Bản nháp"].tap()
+        XCTAssertTrue(app.staticTexts["Ban nhap iOS"].waitForExistence(timeout:10))
+    }
 }

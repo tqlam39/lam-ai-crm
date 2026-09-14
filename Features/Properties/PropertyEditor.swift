@@ -102,7 +102,13 @@ struct PropertyEditor: View {
                     VStack(alignment:.leading,spacing:8) {
                         Button("Xem \(match.property.title) · \(match.score)%") {oldProperty = match.property}
                         Text(match.reasons.joined(separator:" · ")).font(.caption)
-                        Button("Cập nhật BĐS này") {record["id"] = .string(match.property.id);record["createdAt"] = match.property["createdAt"];confirm = true}
+                        Button("Cập nhật BĐS này") {
+                            let newImages = record["media.images"].array
+                            record.value = match.property.value.merging(record.value)
+                            let oldImages = match.property["media.images"].array
+                            setImages(oldImages + newImages.filter{image in !oldImages.contains{$0["id"] == image["id"]}})
+                            record["id"] = .string(match.property.id);record["createdAt"] = match.property["createdAt"];confirm = true
+                        }
                     }
                 }
                 Button("Tôi đã kiểm tra, vẫn tạo mới") {Task{await persist()}}
@@ -114,6 +120,7 @@ struct PropertyEditor: View {
             }
         }
         .navigationTitle(store.data.properties.contains{$0.id == record.id} ? "Chỉnh sửa BĐS" : "Thêm bất động sản")
+        .toolbar {ToolbarItem(placement:.topBarTrailing) {Button("Nháp") {Task{await saveDraft()}}.disabled(store.busy || importing).accessibilityIdentifier("toolbar-save-draft")}}
         .onChange(of:photos) {_,items in Task {importing = true;defer{importing = false;photos = []};do{var images = record["media.images"].array;for item in items {if let data = try await item.loadTransferable(type:Data.self){images.append(try MediaFiles.saveImage(data))}};setImages(images)}catch{self.error = error.localizedDescription}}}
         .confirmationDialog("Xác nhận thay đổi giá, trạng thái hoặc chủ sở hữu?",isPresented:$confirm,titleVisibility:.visible) {Button("Xác nhận và lưu") {Task{await persist()}}}
         .sheet(item:$oldProperty) {property in NavigationStack {PropertyReadView(id:property.id).toolbar {ToolbarItem(placement:.cancellationAction){Button("Đóng"){oldProperty = nil}}}}}
@@ -138,5 +145,8 @@ struct PropertyEditor: View {
     }
     private func persist() async {
         do {try Validation.property(record);try await store.commit(entity:record.id,action:"Lưu bất động sản") {d in d.upsert(record,into:"properties");d.drafts.removeAll{$0.id == record.id}};dismiss()}catch{self.error = error.localizedDescription}
+    }
+    private func saveDraft() async {
+        do{try await store.commit(entity:record.id,action:"Lưu nháp BĐS"){$0.upsert(record,into:"drafts")};dismiss()}catch{self.error = error.localizedDescription}
     }
 }
