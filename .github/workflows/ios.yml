@@ -17,6 +17,7 @@ jobs:
           xcodegen generate
           xcodebuild -version
       - name: Select iPhone Simulator
+        timeout-minutes: 5
         run: |
           xcrun simctl list devices available --json > devices.json
           python3 - <<'PY'
@@ -28,10 +29,21 @@ jobs:
           with open(os.environ['GITHUB_ENV'],'a') as f: f.write('SIMULATOR_ID='+device['udid']+'\n')
           print(device['name'])
           PY
-      - name: Build and test
+      - name: Compile Simulator target
+        timeout-minutes: 8
         run: |
           set -o pipefail
-          xcodebuild -project LamAICRM.xcodeproj -scheme LamAICRM -destination "platform=iOS Simulator,id=$SIMULATOR_ID" -derivedDataPath DerivedData -resultBundlePath TestResults.xcresult CODE_SIGNING_ALLOWED=NO test 2>&1 | tee build.log
+          xcodebuild -project LamAICRM.xcodeproj -scheme LamAICRM -destination 'generic/platform=iOS Simulator' -derivedDataPath DerivedData CODE_SIGNING_ALLOWED=NO build-for-testing 2>&1 | tee build.log
+      - name: Boot Simulator
+        timeout-minutes: 6
+        run: |
+          xcrun simctl boot "$SIMULATOR_ID" || true
+          xcrun simctl bootstatus "$SIMULATOR_ID" -b
+      - name: Run tests
+        timeout-minutes: 6
+        run: |
+          set -o pipefail
+          xcodebuild -project LamAICRM.xcodeproj -scheme LamAICRM -destination "platform=iOS Simulator,id=$SIMULATOR_ID" -destination-timeout 60 -parallel-testing-enabled NO -derivedDataPath DerivedData -resultBundlePath TestResults.xcresult CODE_SIGNING_ALLOWED=NO test-without-building 2>&1 | tee test.log
       - name: Launch and capture
         run: |
           xcrun simctl boot "$SIMULATOR_ID" || true
@@ -48,6 +60,7 @@ jobs:
           path: |
             LamAICRM.xcodeproj
             build.log
+            test.log
             TestResults.xcresult
             Simulator.png
             LamAICRM-Simulator.zip

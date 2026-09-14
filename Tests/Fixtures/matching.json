@@ -1,0 +1,782 @@
+[
+  {
+    "property": {
+      "id": "demo-0",
+      "code": "BĐS-001",
+      "title": "Nhà sân vườn • Phú Lợi",
+      "type": "HOUSE",
+      "transactionType": "SALE",
+      "status": "ACTIVE",
+      "location": {
+        "provinceCity": "TP Cần Thơ",
+        "wardCommune": "Phường Phú Lợi"
+      },
+      "dimensions": {
+        "width": 5,
+        "length": 24,
+        "calculatedArea": 120
+      },
+      "direction": "E",
+      "bedrooms": 3,
+      "price": {
+        "amount": 1450000000,
+        "unit": "VND"
+      },
+      "owner": {
+        "name": "Chủ mẫu 1"
+      },
+      "media": {
+        "images": [
+          {
+            "id": "sample",
+            "url": "/sample-property.svg",
+            "order": 0,
+            "createdAt": "2026-09-14T11:24:03.345Z"
+          }
+        ]
+      },
+      "road": {
+        "carAccess": true
+      },
+      "note": "Dữ liệu minh họa, không phải tin bất động sản thực.",
+      "createdAt": "2026-09-14T11:24:03.345Z",
+      "updatedAt": "2026-09-14T11:24:03.345Z",
+      "lastVerifiedAt": "2026-09-12T11:24:03.346Z"
+    },
+    "requirement": {
+      "id": "empty",
+      "customerId": "customer-1",
+      "status": "ACTIVE"
+    },
+    "weights": {
+      "area": 25,
+      "price": 20,
+      "type": 15,
+      "dimensions": 10,
+      "bedrooms": 10,
+      "direction": 5,
+      "legal": 5,
+      "car": 5,
+      "semantic": 5
+    },
+    "expected": {
+      "eligible": true,
+      "score": 0,
+      "reasons": [
+        "Chưa có tiêu chí cụ thể để chấm điểm"
+      ]
+    }
+  },
+  {
+    "property": {
+      "id": "demo-0",
+      "code": "BĐS-001",
+      "title": "Nhà sân vườn • Phú Lợi",
+      "type": "HOUSE",
+      "transactionType": "SALE",
+      "status": "ACTIVE",
+      "location": {
+        "provinceCity": "TP Cần Thơ",
+        "wardCommune": "Phường Phú Lợi"
+      },
+      "dimensions": {
+        "width": 5,
+        "length": 24,
+        "calculatedArea": 120
+      },
+      "direction": "E",
+      "bedrooms": 3,
+      "price": {
+        "amount": 1450000000,
+        "unit": "VND"
+      },
+      "owner": {
+        "name": "Chủ mẫu 1"
+      },
+      "media": {
+        "images": [
+          {
+            "id": "sample",
+            "url": "/sample-property.svg",
+            "order": 0,
+            "createdAt": "2026-09-14T11:24:03.345Z"
+          }
+        ]
+      },
+      "road": {
+        "carAccess": true
+      },
+      "note": "Dữ liệu minh họa, không phải tin bất động sản thực.",
+      "createdAt": "2026-09-14T11:24:03.345Z",
+      "updatedAt": "2026-09-14T11:24:03.345Z",
+      "lastVerifiedAt": "2026-09-12T11:24:03.346Z"
+    },
+    "requirement": {
+      "id": "req-1",
+      "customerId": "customer-1",
+      "status": "ACTIVE",
+      "propertyTypes": [
+        "HOUSE"
+      ],
+      "wardCommunes": [
+        "Phường Phú Lợi"
+      ],
+      "priceMax": 1600000000,
+      "bedroomsMin": 3,
+      "carAccess": true
+    },
+    "weights": {
+      "area": 25,
+      "price": 20,
+      "type": 15,
+      "dimensions": 10,
+      "bedrooms": 10,
+      "direction": 5,
+      "legal": 5,
+      "car": 5,
+      "semantic": 5
+    },
+    "expected": {
+      "eligible": true,
+      "score": 100,
+      "reasons": [
+        "Đúng khu vực",
+        "Trong ngân sách",
+        "Đúng loại BĐS",
+        "Đủ phòng ngủ",
+        "Ô tô tới"
+      ]
+    }
+  },
+  {
+    "property": {
+      "id": "demo-0",
+      "code": "BĐS-001",
+      "title": "Nhà sân vườn • Phú Lợi",
+      "type": "HOUSE",
+      "transactionType": "SALE",
+      "status": "ACTIVE",
+      "location": {
+        "provinceCity": "TP Cần Thơ",
+        "wardCommune": "Phường Phú Lợi"
+      },
+      "dimensions": {
+        "width": 5,
+        "length": 24,
+        "calculatedArea": 120
+      },
+      "direction": "E",
+      "bedrooms": 3,
+      "price": {
+        "amount": 1450000000,
+        "unit": "VND"
+      },
+      "owner": {
+        "name": "Chủ mẫu 1"
+      },
+      "media": {
+        "images": [
+          {
+            "id": "sample",
+            "url": "/sample-property.svg",
+            "order": 0,
+            "createdAt": "2026-09-14T11:24:03.345Z"
+          }
+        ]
+      },
+      "road": {
+        "carAccess": true
+      },
+      "note": "Dữ liệu minh họa, không phải tin bất động sản thực.",
+      "createdAt": "2026-09-14T11:24:03.345Z",
+      "updatedAt": "2026-09-14T11:24:03.345Z",
+      "lastVerifiedAt": "2026-09-12T11:24:03.346Z"
+    },
+    "requirement": {
+      "id": "variant-0",
+      "customerId": "customer-1",
+      "status": "ACTIVE",
+      "propertyTypes": [
+        "HOUSE"
+      ],
+      "wardCommunes": [
+        "Phường Phú Lợi"
+      ],
+      "priceMax": 1000000000,
+      "bedroomsMin": 3,
+      "carAccess": true
+    },
+    "weights": {
+      "area": 25,
+      "price": 20,
+      "type": 15,
+      "dimensions": 10,
+      "bedrooms": 10,
+      "direction": 5,
+      "legal": 5,
+      "car": 5,
+      "semantic": 5
+    },
+    "expected": {
+      "eligible": false,
+      "score": 0,
+      "reasons": [
+        "Vượt ngân sách"
+      ]
+    }
+  },
+  {
+    "property": {
+      "id": "demo-0",
+      "code": "BĐS-001",
+      "title": "Nhà sân vườn • Phú Lợi",
+      "type": "HOUSE",
+      "transactionType": "SALE",
+      "status": "ACTIVE",
+      "location": {
+        "provinceCity": "TP Cần Thơ",
+        "wardCommune": "Phường Phú Lợi"
+      },
+      "dimensions": {
+        "width": 5,
+        "length": 24,
+        "calculatedArea": 120
+      },
+      "direction": "E",
+      "bedrooms": 3,
+      "price": {
+        "amount": 1450000000,
+        "unit": "VND"
+      },
+      "owner": {
+        "name": "Chủ mẫu 1"
+      },
+      "media": {
+        "images": [
+          {
+            "id": "sample",
+            "url": "/sample-property.svg",
+            "order": 0,
+            "createdAt": "2026-09-14T11:24:03.345Z"
+          }
+        ]
+      },
+      "road": {
+        "carAccess": true
+      },
+      "note": "Dữ liệu minh họa, không phải tin bất động sản thực.",
+      "createdAt": "2026-09-14T11:24:03.345Z",
+      "updatedAt": "2026-09-14T11:24:03.345Z",
+      "lastVerifiedAt": "2026-09-12T11:24:03.346Z"
+    },
+    "requirement": {
+      "id": "variant-1",
+      "customerId": "customer-1",
+      "status": "ACTIVE",
+      "propertyTypes": [
+        "HOUSE"
+      ],
+      "wardCommunes": [
+        "Phường Phú Lợi"
+      ],
+      "priceMax": 1600000000,
+      "bedroomsMin": 3,
+      "carAccess": true,
+      "priceMin": 2000000000
+    },
+    "weights": {
+      "area": 25,
+      "price": 20,
+      "type": 15,
+      "dimensions": 10,
+      "bedrooms": 10,
+      "direction": 5,
+      "legal": 5,
+      "car": 5,
+      "semantic": 5
+    },
+    "expected": {
+      "eligible": false,
+      "score": 0,
+      "reasons": [
+        "Dưới ngân sách"
+      ]
+    }
+  },
+  {
+    "property": {
+      "id": "demo-0",
+      "code": "BĐS-001",
+      "title": "Nhà sân vườn • Phú Lợi",
+      "type": "HOUSE",
+      "transactionType": "SALE",
+      "status": "ACTIVE",
+      "location": {
+        "provinceCity": "TP Cần Thơ",
+        "wardCommune": "Phường Phú Lợi"
+      },
+      "dimensions": {
+        "width": 5,
+        "length": 24,
+        "calculatedArea": 120
+      },
+      "direction": "E",
+      "bedrooms": 3,
+      "price": {
+        "amount": 1450000000,
+        "unit": "VND"
+      },
+      "owner": {
+        "name": "Chủ mẫu 1"
+      },
+      "media": {
+        "images": [
+          {
+            "id": "sample",
+            "url": "/sample-property.svg",
+            "order": 0,
+            "createdAt": "2026-09-14T11:24:03.345Z"
+          }
+        ]
+      },
+      "road": {
+        "carAccess": true
+      },
+      "note": "Dữ liệu minh họa, không phải tin bất động sản thực.",
+      "createdAt": "2026-09-14T11:24:03.345Z",
+      "updatedAt": "2026-09-14T11:24:03.345Z",
+      "lastVerifiedAt": "2026-09-12T11:24:03.346Z"
+    },
+    "requirement": {
+      "id": "variant-2",
+      "customerId": "customer-1",
+      "status": "ACTIVE",
+      "propertyTypes": [
+        "HOUSE"
+      ],
+      "wardCommunes": [
+        "Phường Phú Lợi"
+      ],
+      "priceMax": 1600000000,
+      "bedroomsMin": 3,
+      "carAccess": true,
+      "directions": [
+        "S"
+      ]
+    },
+    "weights": {
+      "area": 25,
+      "price": 20,
+      "type": 15,
+      "dimensions": 10,
+      "bedrooms": 10,
+      "direction": 5,
+      "legal": 5,
+      "car": 5,
+      "semantic": 5
+    },
+    "expected": {
+      "eligible": false,
+      "score": 0,
+      "reasons": [
+        "Hướng"
+      ]
+    }
+  },
+  {
+    "property": {
+      "id": "demo-0",
+      "code": "BĐS-001",
+      "title": "Nhà sân vườn • Phú Lợi",
+      "type": "HOUSE",
+      "transactionType": "SALE",
+      "status": "ACTIVE",
+      "location": {
+        "provinceCity": "TP Cần Thơ",
+        "wardCommune": "Phường Phú Lợi"
+      },
+      "dimensions": {
+        "width": 5,
+        "length": 24,
+        "calculatedArea": 120
+      },
+      "direction": "E",
+      "bedrooms": 3,
+      "price": {
+        "amount": 1450000000,
+        "unit": "VND"
+      },
+      "owner": {
+        "name": "Chủ mẫu 1"
+      },
+      "media": {
+        "images": [
+          {
+            "id": "sample",
+            "url": "/sample-property.svg",
+            "order": 0,
+            "createdAt": "2026-09-14T11:24:03.345Z"
+          }
+        ]
+      },
+      "road": {
+        "carAccess": true
+      },
+      "note": "Dữ liệu minh họa, không phải tin bất động sản thực.",
+      "createdAt": "2026-09-14T11:24:03.345Z",
+      "updatedAt": "2026-09-14T11:24:03.345Z",
+      "lastVerifiedAt": "2026-09-12T11:24:03.346Z"
+    },
+    "requirement": {
+      "id": "variant-3",
+      "customerId": "customer-1",
+      "status": "ACTIVE",
+      "propertyTypes": [
+        "LAND"
+      ],
+      "wardCommunes": [
+        "Phường Phú Lợi"
+      ],
+      "priceMax": 1600000000,
+      "bedroomsMin": 3,
+      "carAccess": true
+    },
+    "weights": {
+      "area": 25,
+      "price": 20,
+      "type": 15,
+      "dimensions": 10,
+      "bedrooms": 10,
+      "direction": 5,
+      "legal": 5,
+      "car": 5,
+      "semantic": 5
+    },
+    "expected": {
+      "eligible": false,
+      "score": 0,
+      "reasons": [
+        "Loại BĐS"
+      ]
+    }
+  },
+  {
+    "property": {
+      "id": "demo-0",
+      "code": "BĐS-001",
+      "title": "Nhà sân vườn • Phú Lợi",
+      "type": "HOUSE",
+      "transactionType": "SALE",
+      "status": "ACTIVE",
+      "location": {
+        "provinceCity": "TP Cần Thơ",
+        "wardCommune": "Phường Phú Lợi"
+      },
+      "dimensions": {
+        "width": 5,
+        "length": 24,
+        "calculatedArea": 120
+      },
+      "direction": "E",
+      "bedrooms": 3,
+      "price": {
+        "amount": 1450000000,
+        "unit": "VND"
+      },
+      "owner": {
+        "name": "Chủ mẫu 1"
+      },
+      "media": {
+        "images": [
+          {
+            "id": "sample",
+            "url": "/sample-property.svg",
+            "order": 0,
+            "createdAt": "2026-09-14T11:24:03.345Z"
+          }
+        ]
+      },
+      "road": {
+        "carAccess": true
+      },
+      "note": "Dữ liệu minh họa, không phải tin bất động sản thực.",
+      "createdAt": "2026-09-14T11:24:03.345Z",
+      "updatedAt": "2026-09-14T11:24:03.345Z",
+      "lastVerifiedAt": "2026-09-12T11:24:03.346Z"
+    },
+    "requirement": {
+      "id": "variant-4",
+      "customerId": "customer-1",
+      "status": "ACTIVE",
+      "propertyTypes": [
+        "HOUSE"
+      ],
+      "wardCommunes": [
+        "Phường Phú Lợi"
+      ],
+      "priceMax": 1600000000,
+      "bedroomsMin": 3,
+      "carAccess": true,
+      "areaMax": 100
+    },
+    "weights": {
+      "area": 25,
+      "price": 20,
+      "type": 15,
+      "dimensions": 10,
+      "bedrooms": 10,
+      "direction": 5,
+      "legal": 5,
+      "car": 5,
+      "semantic": 5
+    },
+    "expected": {
+      "eligible": false,
+      "score": 0,
+      "reasons": [
+        "Diện tích lớn"
+      ]
+    }
+  },
+  {
+    "property": {
+      "id": "demo-0",
+      "code": "BĐS-001",
+      "title": "Nhà sân vườn • Phú Lợi",
+      "type": "HOUSE",
+      "transactionType": "SALE",
+      "status": "ACTIVE",
+      "location": {
+        "provinceCity": "TP Cần Thơ",
+        "wardCommune": "Phường Phú Lợi"
+      },
+      "dimensions": {
+        "width": 5,
+        "length": 24,
+        "calculatedArea": 120
+      },
+      "direction": "E",
+      "bedrooms": 3,
+      "price": {
+        "amount": 1450000000,
+        "unit": "VND"
+      },
+      "owner": {
+        "name": "Chủ mẫu 1"
+      },
+      "media": {
+        "images": [
+          {
+            "id": "sample",
+            "url": "/sample-property.svg",
+            "order": 0,
+            "createdAt": "2026-09-14T11:24:03.345Z"
+          }
+        ]
+      },
+      "road": {
+        "carAccess": true
+      },
+      "note": "Dữ liệu minh họa, không phải tin bất động sản thực.",
+      "createdAt": "2026-09-14T11:24:03.345Z",
+      "updatedAt": "2026-09-14T11:24:03.345Z",
+      "lastVerifiedAt": "2026-09-12T11:24:03.346Z"
+    },
+    "requirement": {
+      "id": "variant-5",
+      "customerId": "customer-1",
+      "status": "ACTIVE",
+      "propertyTypes": [
+        "HOUSE"
+      ],
+      "wardCommunes": [
+        "Phường Phú Lợi"
+      ],
+      "priceMax": 1600000000,
+      "bedroomsMin": 5,
+      "carAccess": true
+    },
+    "weights": {
+      "area": 25,
+      "price": 20,
+      "type": 15,
+      "dimensions": 10,
+      "bedrooms": 10,
+      "direction": 5,
+      "legal": 5,
+      "car": 5,
+      "semantic": 5
+    },
+    "expected": {
+      "eligible": false,
+      "score": 0,
+      "reasons": [
+        "Thiếu phòng ngủ"
+      ]
+    }
+  },
+  {
+    "property": {
+      "id": "demo-0",
+      "code": "BĐS-001",
+      "title": "Nhà sân vườn • Phú Lợi",
+      "type": "HOUSE",
+      "transactionType": "SALE",
+      "status": "ACTIVE",
+      "location": {
+        "provinceCity": "TP Cần Thơ",
+        "wardCommune": "Phường Phú Lợi"
+      },
+      "dimensions": {
+        "width": 5,
+        "length": 24,
+        "calculatedArea": 120
+      },
+      "direction": "E",
+      "bedrooms": 3,
+      "price": {
+        "amount": 1450000000,
+        "unit": "VND"
+      },
+      "owner": {
+        "name": "Chủ mẫu 1"
+      },
+      "media": {
+        "images": [
+          {
+            "id": "sample",
+            "url": "/sample-property.svg",
+            "order": 0,
+            "createdAt": "2026-09-14T11:24:03.345Z"
+          }
+        ]
+      },
+      "road": {
+        "carAccess": true
+      },
+      "note": "Dữ liệu minh họa, không phải tin bất động sản thực.",
+      "createdAt": "2026-09-14T11:24:03.345Z",
+      "updatedAt": "2026-09-14T11:24:03.345Z",
+      "lastVerifiedAt": "2026-09-12T11:24:03.346Z"
+    },
+    "requirement": {
+      "id": "variant-6",
+      "customerId": "customer-1",
+      "status": "ACTIVE",
+      "propertyTypes": [
+        "HOUSE"
+      ],
+      "wardCommunes": [
+        "Phường Phú Lợi"
+      ],
+      "priceMax": 1600000000,
+      "bedroomsMin": 3,
+      "carAccess": true,
+      "legalPreferences": [
+        "sổ đỏ"
+      ]
+    },
+    "weights": {
+      "area": 25,
+      "price": 20,
+      "type": 15,
+      "dimensions": 10,
+      "bedrooms": 10,
+      "direction": 5,
+      "legal": 5,
+      "car": 5,
+      "semantic": 5
+    },
+    "expected": {
+      "eligible": false,
+      "score": 0,
+      "reasons": [
+        "Chưa đủ pháp lý"
+      ]
+    }
+  },
+  {
+    "property": {
+      "id": "demo-0",
+      "code": "BĐS-001",
+      "title": "Nhà sân vườn • Phú Lợi",
+      "type": "HOUSE",
+      "transactionType": "SALE",
+      "status": "ACTIVE",
+      "location": {
+        "provinceCity": "TP Cần Thơ",
+        "wardCommune": "Phường Phú Lợi"
+      },
+      "dimensions": {
+        "width": 5,
+        "length": 24,
+        "calculatedArea": 120
+      },
+      "direction": "E",
+      "bedrooms": 3,
+      "price": {
+        "amount": 1450000000,
+        "unit": "VND"
+      },
+      "owner": {
+        "name": "Chủ mẫu 1"
+      },
+      "media": {
+        "images": [
+          {
+            "id": "sample",
+            "url": "/sample-property.svg",
+            "order": 0,
+            "createdAt": "2026-09-14T11:24:03.345Z"
+          }
+        ]
+      },
+      "road": {
+        "carAccess": true
+      },
+      "note": "Dữ liệu minh họa, không phải tin bất động sản thực.",
+      "createdAt": "2026-09-14T11:24:03.345Z",
+      "updatedAt": "2026-09-14T11:24:03.345Z",
+      "lastVerifiedAt": "2026-09-12T11:24:03.346Z"
+    },
+    "requirement": {
+      "id": "variant-7",
+      "customerId": "customer-1",
+      "status": "ACTIVE",
+      "propertyTypes": [
+        "HOUSE"
+      ],
+      "wardCommunes": [
+        "Phường Phú Lợi"
+      ],
+      "priceMax": 1600000000,
+      "bedroomsMin": 3,
+      "carAccess": true,
+      "semanticPreferences": [
+        "sân thoáng"
+      ]
+    },
+    "weights": {
+      "area": 25,
+      "price": 20,
+      "type": 15,
+      "dimensions": 10,
+      "bedrooms": 10,
+      "direction": 5,
+      "legal": 5,
+      "car": 5,
+      "semantic": 5
+    },
+    "expected": {
+      "eligible": true,
+      "score": 94,
+      "reasons": [
+        "Đúng khu vực",
+        "Trong ngân sách",
+        "Đúng loại BĐS",
+        "Đủ phòng ngủ",
+        "Ô tô tới"
+      ]
+    }
+  }
+]

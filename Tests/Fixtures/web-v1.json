@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 1,
+  "exportedAt": "2026-09-14T11:24:03.424Z",
+  "data": {
+    "properties": [
+      {
+        "id": "demo-0",
+        "code": "BĐS-001",
+        "title": "Nhà sân vườn • Phú Lợi",
+        "type": "HOUSE",
+        "transactionType": "SALE",
+        "status": "ACTIVE",
+        "location": {
+          "provinceCity": "TP Cần Thơ",
+          "wardCommune": "Phường Phú Lợi"
+        },
+        "dimensions": {
+          "width": 5,
+          "length": 24,
+          "calculatedArea": 120
+        },
+        "direction": "E",
+        "bedrooms": 3,
+        "price": {
+          "amount": 1450000000,
+          "unit": "VND"
+        },
+        "owner": {
+          "name": "Chủ mẫu 1"
+        },
+        "media": {
+          "images": [
+            {
+              "id": "sample",
+              "url": "/sample-property.svg",
+              "order": 0,
+              "createdAt": "2026-09-14T11:24:03.345Z"
+            }
+          ]
+        },
+        "road": {
+          "carAccess": true
+        },
+        "note": "Dữ liệu minh họa, không phải tin bất động sản thực.",
+        "createdAt": "2026-09-14T11:24:03.345Z",
+        "updatedAt": "2026-09-14T11:24:03.345Z",
+        "lastVerifiedAt": "2026-09-12T11:24:03.346Z"
+      },
+      {
+        "id": "demo-1",
+        "code": "BĐS-002",
+        "title": "Đất nền đường rộng • Mỹ Xuyên",
+        "type": "LAND",
+        "transactionType": "SALE",
+        "status": "ACTIVE",
+        "location": {
+          "provinceCity": "TP Cần Thơ",
+          "wardCommune": "Phường Mỹ Xuyên"
+        },
+        "dimensions": {
+          "width": 5,
+          "length": 20,
+          "calculatedArea": 100
+        },
+        "direction": "E",
+        "bedrooms": 0,
+        "price": {
+          "amount": 850000000,
+          "unit": "VND"
+        },
+        "owner": {
+          "name": "Chủ mẫu 2"
+        },
+        "media": {
+          "images": [
+            {
+              "id": "sample",
+              "url": "/sample-property.svg",
+              "order": 0,
+              "createdAt": "2026-09-14T11:24:03.345Z"
+            }
+          ]
+        },
+        "road": {
+          "carAccess": true
+        },
+        "note": "Dữ liệu minh họa, không phải tin bất động sản thực.",
+        "createdAt": "2026-09-14T11:24:03.345Z",
+        "updatedAt": "2026-09-14T11:24:03.345Z",
+        "lastVerifiedAt": "2026-08-27T11:24:03.346Z"
+      },
+      {
+        "id": "demo-2",
+        "code": "BĐS-003",
+        "title": "Nhà phố hai tầng • Sóc Trăng",
+        "type": "HOUSE",
+        "transactionType": "SALE",
+        "status": "ACTIVE",
+        "location": {
+          "provinceCity": "TP Cần Thơ",
+          "wardCommune": "Phường Sóc Trăng"
+        },
+        "dimensions": {
+          "width": 5,
+          "length": 18,
+          "calculatedArea": 90
+        },
+        "direction": "E",
+        "bedrooms": 4,
+        "price": {
+          "amount": 2350000000,
+          "unit": "VND"
+        },
+        "owner": {
+          "name": "Chủ mẫu 3"
+        },
+        "media": {
+          "images": [
+            {
+              "id": "sample",
+              "url": "/sample-property.svg",
+              "order": 0,
+              "createdAt": "2026-09-14T11:24:03.345Z"
+            }
+          ]
+        },
+        "road": {
+          "carAccess": true
+        },
+        "note": "Dữ liệu minh họa, không phải tin bất động sản thực.",
+        "createdAt": "2026-09-14T11:24:03.345Z",
+        "updatedAt": "2026-09-14T11:24:03.345Z",
+        "lastVerifiedAt": "2026-09-12T11:24:03.346Z"
+      }
+    ],
+    "drafts": [],
+    "customers": [
+      {
+        "id": "customer-1",
+        "name": "Nguyễn Minh Anh (mẫu)",
+        "status": "Đang tìm",
+        "priority": "HIGH",
+        "note": "Tìm nhà để ở, ưu tiên sân thoáng.",
+        "createdAt": "2026-09-14T11:24:03.345Z",
+        "updatedAt": "2026-09-14T11:24:03.345Z"
+      }
+    ],
+    "requirements": [
+      {
+        "id": "req-1",
+        "customerId": "customer-1",
+        "status": "ACTIVE",
+        "propertyTypes": [
+          "HOUSE"
+        ],
+        "wardCommunes": [
+          "Phường Phú Lợi"
+        ],
+        "priceMax": 1600000000,
+        "bedroomsMin": 3,
+        "carAccess": true
+      }
+    ],
+    "tasks": [
+      {
+        "id": "task-1",
+        "title": "Gọi lại khách Minh Anh (mẫu)",
+        "type": "CALL",
+        "customerId": "customer-1",
+        "priority": "URGENT",
+        "status": "TODO",
+        "dueAt": "2026-09-14T10:24:03.346Z"
+      },
+      {
+        "id": "task-2",
+        "title": "Xác minh giá đất Mỹ Xuyên (mẫu)",
+        "type": "FOLLOW_UP",
+        "propertyId": "demo-1",
+        "priority": "HIGH",
+        "status": "TODO",
+        "dueAt": "2026-09-14T13:24:03.346Z"
+      }
+    ],
+    "activities": [],
+    "settings": {
+      "brand": "Lắm BĐS Sóc Trăng",
+      "phone": "0946 261 719",
+      "favoriteAreas": [
+        "Phường Phú Lợi",
+        "Phường Mỹ Xuyên",
+        "Phường Sóc Trăng",
+        "Xã Trần Đề"
+      ],
+      "weights": {
+        "area": 25,
+        "price": 20,
+        "type": 15,
+        "dimensions": 10,
+        "bedrooms": 10,
+        "direction": 5,
+        "legal": 5,
+        "car": 5,
+        "semantic": 5
+      }
+    }
+  }
+}
