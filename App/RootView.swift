@@ -5,6 +5,7 @@ enum CRMTab: String, CaseIterable { case home = "Nhà", properties = "BĐS", cus
     var title: String { switch self { case .home: return "LẮM AI CRM"; case .properties: return "Quỹ bất động sản"; case .customers: return "Khách hàng"; case .ai: return "AI Copilot" } }
 }
 enum CRMRoute: String, Hashable, CaseIterable {
+    case newProperty = "Thêm BĐS"
     case tasks = "Công việc", urgent = "Việc cần gấp", calendar = "Lịch hẹn", matching = "Matching hai chiều", settings = "Cài đặt", reports = "Báo cáo & sao lưu", search = "Tìm kiếm", requirements = "Nhu cầu khách"
 }
 
@@ -20,7 +21,7 @@ struct RootView: View {
                 else {
                     switch tab {
                     case .home: HomeOverview { path.append($0) }
-                    case .properties: RecordList(collection:"properties")
+                    case .properties: PropertiesView()
                     case .customers: RecordList(collection:"customers")
                     case .ai: CRMEmpty(title:"Trợ lý bất động sản",detail:"Nhập tin, nhu cầu và hỏi dữ liệu CRM bằng tiếng Việt.").padding()
                     }
@@ -29,6 +30,9 @@ struct RootView: View {
             .frame(maxWidth:.infinity,maxHeight:.infinity)
             .background(CRMStyle.background)
             .navigationTitle(tab.title)
+            .toolbarBackground(CRMStyle.green,for:.navigationBar)
+            .toolbarBackground(.visible,for:.navigationBar)
+            .toolbarColorScheme(.dark,for:.navigationBar)
             .toolbar {
                 ToolbarItem(placement:.topBarTrailing) {
                     Menu { ForEach(CRMRoute.allCases,id:\.self) { route in Button(route.rawValue) { path.append(route) } } } label: { Image(systemName:"line.3.horizontal").accessibilityLabel("Các chức năng") }
@@ -50,7 +54,7 @@ struct RootView: View {
         .sheet(isPresented:$quick) {
             NavigationStack {
                 List {
-                    Button("BĐS thủ công") { quick = false; tab = .properties; path = [] }
+                    Button("BĐS thủ công") { quick = false; tab = .properties; path = [.newProperty] }
                     Button("Khách hàng") { quick = false; tab = .customers; path = [] }
                     Button("Nhu cầu khách") { quick = false; path.append(.requirements) }
                     Button("Công việc / lịch hẹn") { quick = false; path.append(.tasks) }
@@ -65,6 +69,7 @@ struct RootView: View {
     }
     @ViewBuilder private func routeView(_ route:CRMRoute) -> some View {
         switch route {
+        case .newProperty: PropertyEditor(record:PropertyLogic.newDraft())
         case .tasks,.calendar,.urgent: RecordList(collection:"tasks",urgent:route == .urgent)
         case .requirements: RecordList(collection:"requirements")
         case .search: SearchView()
