@@ -1,7 +1,10 @@
 node_modules/
-.next/
+dist/
+android/.gradle/
+android/app/build/
+android/build/
+android/local.properties
+android/app/src/main/assets/public/
+*.jks
+*.keystore
 .env*
-!.env.example
-*.tsbuildinfo
-.firebase/
-*-debug.log*

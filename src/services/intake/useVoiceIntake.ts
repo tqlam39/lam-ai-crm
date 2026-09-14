@@ -1,9 +1,10 @@
+import {NativeCRM,isAndroid} from '@/native/bridge';
 'use client';
 import {useEffect,useRef,useState} from 'react';
 export function useVoiceIntake(onText:(value:string)=>void,onError:(message:string)=>void){
  const [listening,setListening]=useState(false);const [interim,setInterim]=useState('');const active=useRef<any>(null);const append=useRef(onText);append.current=onText;const report=useRef(onError);report.current=onError;
  useEffect(()=>()=>{active.current?.abort();active.current=null},[]);
- function toggle(){if(active.current){active.current.stop();return}const API=(window as any).SpeechRecognition||(window as any).webkitSpeechRecognition;
+ function toggle(){if(isAndroid){if(listening)return;setListening(true);NativeCRM.recognizeSpeech().then((r:any)=>{if(r.text)append.current(r.text)}).catch((e:Error)=>report.current(e.message)).finally(()=>setListening(false));return}if(active.current){active.current.stop();return}const API=(window as any).SpeechRecognition||(window as any).webkitSpeechRecognition;
  if(!API){report.current('Trình duyệt chưa hỗ trợ nhận giọng nói. Chạm ô nội dung rồi dùng micro trên bàn phím iPhone, hoặc mở bằng Chrome/Safari có hỗ trợ.');return}
  const speech=new API();speech.lang='vi-VN';speech.continuous=true;speech.interimResults=true;active.current=speech;
  speech.onresult=(event:any)=>{let partial='';for(let i=event.resultIndex;i<event.results.length;i++){if(event.results[i].isFinal)append.current(event.results[i][0].transcript);else partial+=event.results[i][0].transcript}setInterim(partial)};
