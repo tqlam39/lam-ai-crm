@@ -87,6 +87,19 @@ public class NativeCRMPlugin extends Plugin {
             } catch (Exception e) { call.reject("Không lưu được SQLite. Kiểm tra dung lượng điện thoại (database tối đa 100 MB)."); }
         });
     }
+    @PluginMethod public void openDrive(PluginCall call) {
+        getActivity().runOnUiThread(() -> {
+            try {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://drive.google.com/drive/my-drive"));
+                intent.setPackage("com.google.android.apps.docs");
+                try { getActivity().startActivity(intent); }
+                catch (android.content.ActivityNotFoundException missing) {
+                    getActivity().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://drive.google.com/drive/my-drive")));
+                }
+                call.resolve();
+            } catch (Exception e) { call.reject("Không mở được Drive. Hãy mở ứng dụng Google Drive và đăng nhập, rồi quay lại CRM."); }
+        });
+    }
     @PluginMethod public void exportDocument(PluginCall call) {
         if (documentOpen) { call.reject("Đang chọn tệp khác"); return; }
         String text = call.getString("text", "");
@@ -102,11 +115,11 @@ public class NativeCRMPlugin extends Plugin {
         if (result.getResultCode() != Activity.RESULT_OK || result.getData() == null || result.getData().getData() == null) { call.reject("Đã hủy sao lưu"); return; }
         Uri uri = result.getData().getData();
         disk.execute(() -> {
-            try (OutputStream output = getContext().getContentResolver().openOutputStream(uri, "wt")) {
+            try (OutputStream output = getContext().getContentResolver().openOutputStream(uri, "w")) {
                 if (output == null) throw new IOException();
                 output.write(call.getString("text", "").getBytes(StandardCharsets.UTF_8)); output.flush();
-                call.resolve();
-            } catch (Exception e) { call.reject("Chưa ghi được bản sao lưu. Kiểm tra Drive/mạng/dung lượng; không dùng tệp chưa hoàn tất để khôi phục."); }
+            } catch (Exception e) { call.reject("Chưa ghi được bản sao lưu. Kiểm tra Drive/mạng/dung lượng; không dùng tệp chưa hoàn tất để khôi phục."); return; }
+            call.resolve();
         });
     }
     @PluginMethod public void importDocument(PluginCall call) {
