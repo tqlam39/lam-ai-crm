@@ -1,0 +1,515 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		49BDCA588F946B5EC0878872 /* prices.json in Resources */ = {isa = PBXBuildFile; fileRef = F6402768049962C389CCB606 /* prices.json */; };
+		99393B696AB55E45A8E76381 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3130FD9D3C02AC887CEAB91C /* libsqlite3.tbd */; };
+		B963FD39093A3ED70CDFC7F5 /* LamAICRMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A10B355A0B7DCFCB0083CC /* LamAICRMApp.swift */; };
+		C579E23C2144547D6CE1B21E /* web-v1.json in Resources */ = {isa = PBXBuildFile; fileRef = 6494BCE07CCC8230FCC485BE /* web-v1.json */; };
+		D69929474EF5444F7A4F49F9 /* matching.json in Resources */ = {isa = PBXBuildFile; fileRef = A604F60DE07AF0EAF327706D /* matching.json */; };
+		DB5E3868C90265B8679D7B1B /* BootstrapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096025EB093EB7D8D7E0A204 /* BootstrapTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8C0EF8F2F794EC04C88F4E00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 421A8667028ED2C81EF66124 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 674431CDF04C309209CEBC7C;
+			remoteInfo = LamAICRM;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		096025EB093EB7D8D7E0A204 /* BootstrapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootstrapTests.swift; sourceTree = "<group>"; };
+		1556963E2A7C69EEE712D219 /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
+		2E39555BB1025EEEA9F9F4A3 /* LamAICRM.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = LamAICRM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3130FD9D3C02AC887CEAB91C /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		3158C2C660ECF9DA81255073 /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
+		3EFDB41F8AA0D5D0D58022FE /* LamAICRMTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = LamAICRMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C099940F68350CFC3577F36 /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
+		6494BCE07CCC8230FCC485BE /* web-v1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "web-v1.json"; sourceTree = "<group>"; };
+		A604F60DE07AF0EAF327706D /* matching.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = matching.json; sourceTree = "<group>"; };
+		C4BA1A4B28A10CD35853A542 /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
+		F6402768049962C389CCB606 /* prices.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = prices.json; sourceTree = "<group>"; };
+		F6A10B355A0B7DCFCB0083CC /* LamAICRMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LamAICRMApp.swift; sourceTree = "<group>"; };
+		F9213B3D43593C9EBBD41065 /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		43339C0E6350C93E43AAEA3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99393B696AB55E45A8E76381 /* libsqlite3.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A8B286223FF2F9DFD474FB3 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				096025EB093EB7D8D7E0A204 /* BootstrapTests.swift */,
+				63DD2E8A60D629C291A9151D /* Fixtures */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		44CE2C5E019CC5FD88D945DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3130FD9D3C02AC887CEAB91C /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4A130ABFB84EF0D039519120 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C4BA1A4B28A10CD35853A542 /* .gitkeep */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		5C66BEAFB22D4F812CA047B8 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				1556963E2A7C69EEE712D219 /* .gitkeep */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		63DD2E8A60D629C291A9151D /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				A604F60DE07AF0EAF327706D /* matching.json */,
+				F6402768049962C389CCB606 /* prices.json */,
+				6494BCE07CCC8230FCC485BE /* web-v1.json */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		80FF7AA3855D3EE6377EDD33 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E39555BB1025EEEA9F9F4A3 /* LamAICRM.app */,
+				3EFDB41F8AA0D5D0D58022FE /* LamAICRMTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		85CD68C5857B22D5EADB238E = {
+			isa = PBXGroup;
+			children = (
+				E6BAB7A213E5D0B29063D46C /* App */,
+				DA17438F15BA476866D13006 /* Core */,
+				9A8E416EE3FE543AB773879F /* Data */,
+				5C66BEAFB22D4F812CA047B8 /* Features */,
+				ABCCD0420AAC22C3FFF725AD /* Services */,
+				4A130ABFB84EF0D039519120 /* Shared */,
+				1A8B286223FF2F9DFD474FB3 /* Tests */,
+				44CE2C5E019CC5FD88D945DD /* Frameworks */,
+				80FF7AA3855D3EE6377EDD33 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9A8E416EE3FE543AB773879F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4C099940F68350CFC3577F36 /* .gitkeep */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		ABCCD0420AAC22C3FFF725AD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3158C2C660ECF9DA81255073 /* .gitkeep */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DA17438F15BA476866D13006 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F9213B3D43593C9EBBD41065 /* .gitkeep */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E6BAB7A213E5D0B29063D46C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F6A10B355A0B7DCFCB0083CC /* LamAICRMApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		674431CDF04C309209CEBC7C /* LamAICRM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F2F503007EE350316CDDEE0 /* Build configuration list for PBXNativeTarget "LamAICRM" */;
+			buildPhases = (
+				C7E40490686B4660AE1C81A3 /* Sources */,
+				43339C0E6350C93E43AAEA3B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LamAICRM;
+			packageProductDependencies = (
+			);
+			productName = LamAICRM;
+			productReference = 2E39555BB1025EEEA9F9F4A3 /* LamAICRM.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E659F46D2606B6FB2B0490F4 /* LamAICRMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26D1105620C245B4679473CC /* Build configuration list for PBXNativeTarget "LamAICRMTests" */;
+			buildPhases = (
+				543A0829247717084E462A8A /* Sources */,
+				1DD2240895130BE4B13FB05C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3C69C3F4ED2D62872CBC54CE /* PBXTargetDependency */,
+			);
+			name = LamAICRMTests;
+			packageProductDependencies = (
+			);
+			productName = LamAICRMTests;
+			productReference = 3EFDB41F8AA0D5D0D58022FE /* LamAICRMTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		421A8667028ED2C81EF66124 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					674431CDF04C309209CEBC7C = {
+						DevelopmentTeam = "";
+					};
+					E659F46D2606B6FB2B0490F4 = {
+						DevelopmentTeam = "";
+					};
+				};
+			};
+			buildConfigurationList = B7369E651F88FB4C0E15B497 /* Build configuration list for PBXProject "LamAICRM" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 85CD68C5857B22D5EADB238E;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 80FF7AA3855D3EE6377EDD33 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				674431CDF04C309209CEBC7C /* LamAICRM */,
+				E659F46D2606B6FB2B0490F4 /* LamAICRMTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1DD2240895130BE4B13FB05C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D69929474EF5444F7A4F49F9 /* matching.json in Resources */,
+				49BDCA588F946B5EC0878872 /* prices.json in Resources */,
+				C579E23C2144547D6CE1B21E /* web-v1.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		543A0829247717084E462A8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB5E3868C90265B8679D7B1B /* BootstrapTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7E40490686B4660AE1C81A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B963FD39093A3ED70CDFC7F5 /* LamAICRMApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3C69C3F4ED2D62872CBC54CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 674431CDF04C309209CEBC7C /* LamAICRM */;
+			targetProxy = 8C0EF8F2F794EC04C88F4E00 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0FA419483246C6AA0856BF62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		27BC69BA0227C231E4302E52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tqlam39.LamAICRMTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LamAICRM.app/LamAICRM";
+			};
+			name = Release;
+		};
+		8C3643C2557A7F6FE3205BC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "LẮM AI CRM";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Chụp ảnh bất động sản hoặc đọc thông tin tin đăng.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Nhập thông tin bằng giọng nói khi bạn bấm micro.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Chuyển lời nói tiếng Việt thành nội dung nhập liệu.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tqlam39.lamaicrm.ios;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AEFB4E24F13B9B4530910F39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "LẮM AI CRM";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Chụp ảnh bất động sản hoặc đọc thông tin tin đăng.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Nhập thông tin bằng giọng nói khi bạn bấm micro.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Chuyển lời nói tiếng Việt thành nội dung nhập liệu.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tqlam39.lamaicrm.ios;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C0A0324E0F199B3F3952E5D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		CB5885E29DA73C79F5979BAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tqlam39.LamAICRMTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LamAICRM.app/LamAICRM";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		26D1105620C245B4679473CC /* Build configuration list for PBXNativeTarget "LamAICRMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB5885E29DA73C79F5979BAF /* Debug */,
+				27BC69BA0227C231E4302E52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		2F2F503007EE350316CDDEE0 /* Build configuration list for PBXNativeTarget "LamAICRM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEFB4E24F13B9B4530910F39 /* Debug */,
+				8C3643C2557A7F6FE3205BC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B7369E651F88FB4C0E15B497 /* Build configuration list for PBXProject "LamAICRM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0FA419483246C6AA0856BF62 /* Debug */,
+				C0A0324E0F199B3F3952E5D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 421A8667028ED2C81EF66124 /* Project object */;
+}
