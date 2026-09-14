@@ -1,0 +1,54 @@
+name: iOS phase build and Simulator
+on:
+  push:
+    branches: [ios-native]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  simulator:
+    runs-on: macos-15
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate Xcode project
+        run: |
+          brew list xcodegen >/dev/null 2>&1 || brew install xcodegen
+          xcodegen generate
+          xcodebuild -version
+      - name: Select iPhone Simulator
+        run: |
+          xcrun simctl list devices available --json > devices.json
+          python3 - <<'PY'
+          import json, os
+          devices=json.load(open('devices.json'))['devices']
+          choices=[d for runtime,ds in devices.items() if 'iOS' in runtime for d in ds if d['isAvailable'] and 'iPhone' in d['name']]
+          if not choices: raise SystemExit('No iPhone Simulator installed')
+          device=choices[0]
+          with open(os.environ['GITHUB_ENV'],'a') as f: f.write('SIMULATOR_ID='+device['udid']+'\n')
+          print(device['name'])
+          PY
+      - name: Build and test
+        run: |
+          set -o pipefail
+          xcodebuild -project LamAICRM.xcodeproj -scheme LamAICRM -destination "platform=iOS Simulator,id=$SIMULATOR_ID" -derivedDataPath DerivedData -resultBundlePath TestResults.xcresult CODE_SIGNING_ALLOWED=NO test 2>&1 | tee build.log
+      - name: Launch and capture
+        run: |
+          xcrun simctl boot "$SIMULATOR_ID" || true
+          xcrun simctl bootstatus "$SIMULATOR_ID" -b
+          xcrun simctl install "$SIMULATOR_ID" DerivedData/Build/Products/Debug-iphonesimulator/LamAICRM.app
+          xcrun simctl launch "$SIMULATOR_ID" com.tqlam39.lamaicrm.ios
+          sleep 3
+          xcrun simctl io "$SIMULATOR_ID" screenshot Simulator.png
+          ditto -c -k --sequesterRsrc --keepParent DerivedData/Build/Products/Debug-iphonesimulator/LamAICRM.app LamAICRM-Simulator.zip
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: LAM-CRM-iOS-build
+          path: |
+            LamAICRM.xcodeproj
+            build.log
+            TestResults.xcresult
+            Simulator.png
+            LamAICRM-Simulator.zip
+          retention-days: 14

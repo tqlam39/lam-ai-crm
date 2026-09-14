@@ -1,0 +1,9 @@
+DerivedData/
+.build/
+*.xcresult/
+*.zip
+build.log
+Simulator.png
+devices.json
+xcuserdata/
+.DS_Store
