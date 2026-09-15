@@ -28,7 +28,7 @@ struct PropertiesView: View {
     var body:some View {
         ScrollView {
             LazyVStack(spacing:14) {
-                Toggle("Bản nháp",isOn:$drafts)
+                Picker("Danh sách",selection:$drafts){Text("Quỹ hàng").tag(false);Text("Bản nháp").tag(true)}.pickerStyle(.segmented).accessibilityIdentifier("property-scope")
                 DisclosureGroup("Bộ lọc",isExpanded:$filters) {
                     VStack(spacing:12) {
                         picker("Loại BĐS",$type,CRMStyle.types);picker("Trạng thái",$status,CRMStyle.statuses)
