@@ -24,7 +24,7 @@ struct RootView: View {
                     case .home: HomeOverview { path.append($0) }
                     case .properties: PropertiesView()
                     case .customers: CustomersView()
-                    case .ai: CRMEmpty(title:"Trợ lý bất động sản",detail:"Nhập tin, nhu cầu và hỏi dữ liệu CRM bằng tiếng Việt.").padding()
+                    case .ai: AIIntakeView()
                     }
                 }
             }

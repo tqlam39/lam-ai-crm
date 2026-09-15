@@ -8,7 +8,8 @@
 | 4 | Đạt | Run 34907955279: native navigation/UI tests + unit tests pass |
 | 5 | Đạt | Run 34929773720: build +8 unit +3 UI tests pass, có đóng/mở app và kiểm tra bản nháp đã lưu |
 | 6 | Đạt | Run 34930545110: build + unit/UI tests pass; lưu/mở lại hồ sơ, nhu cầu tùy chọn, chăm sóc, xóa gỡ liên kết |
-| 7 | Đang build/test | Công việc, lịch hẹn, khách pending, nhắc lịch native; chưa chốt trước Simulator |
-| 8–15 | Chưa triển khai | Chưa được coi là hoàn thành |
+| 7 | Đạt | Run 34931139434: build +14 unit +5 UI tests pass, Simulator launch; nhắc lịch cần kiểm tra trên iPhone thật khi ký app |
+| 8 | Đang build/test | AI key/model, trích xuất và preview, OCR/camera/voice/link; kiểm thử provider dùng mock, chưa gọi API trả phí bằng key thật |
+| 9–15 | Chưa triển khai | Chưa được coi là hoàn thành |
 
 Không có dữ liệu thật bị sửa hoặc chuyển tự động. Chưa có bản iOS để cài iPhone.
