@@ -4,6 +4,7 @@ struct CareEditor:View {
     @EnvironmentObject var store:CRMStore
     @Environment(\.dismiss) private var dismiss
     let customerId:String
+    var initialPropertyId = ""
     @State private var type = "CALL"
     @State private var propertyId = ""
     @State private var taskId = ""
@@ -23,6 +24,7 @@ struct CareEditor:View {
             Section("Chăm sóc tiếp") {Toggle("Tạo lịch hẹn tiếp theo",isOn:$followUp);if followUp {DatePicker("Ngày giờ",selection:$nextAt)}}
             if !error.isEmpty {Text(error).foregroundStyle(.red)}
         }.navigationTitle("Ghi nhận chăm sóc")
+        .onAppear {if propertyId.isEmpty {propertyId = initialPropertyId}}
         .toolbar {ToolbarItem(placement:.confirmationAction) {Button("Lưu") {Task {do {
             try await store.commit(entity:customerId,action:"Chăm sóc: "+note) {try CustomerLogic.recordCare(customerId:customerId,propertyId:propertyId,type:type,note:note,nextAt:followUp ? nextAt : nil,completeTaskId:taskId,into:&$0)};dismiss()
         } catch {self.error = error.localizedDescription}}}.disabled(store.busy)}}

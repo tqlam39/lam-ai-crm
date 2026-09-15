@@ -92,6 +92,7 @@ struct CustomerDetail:View {
                         NavigationLink("Sửa thông tin / nhu cầu") {CustomerEditor(customer:c,needs:store.data.requirements.filter{$0.text("customerId") == id})}
                     }
                     Section("Nhu cầu tìm BĐS") {
+                        NavigationLink("BĐS phù hợp từ 70%") {MatchingView(customerId:id)}
                         ForEach(store.data.requirements.filter{$0.text("customerId") == id}) {r in NavigationLink {RequirementEditor(record:r)} label:{NeedSummary(record:r)}}
                         NavigationLink("Thêm nhu cầu") {RequirementEditor(record:CustomerLogic.newNeed(customerId:id))}
                     }

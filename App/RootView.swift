@@ -77,7 +77,7 @@ struct RootView: View {
         case .requirements: RequirementsView()
         case .search: SearchView()
         case .settings,.reports: ScrollView { CRMPanel { Text(store.data.settings["brand"].text).font(.headline); Text(store.data.settings["phone"].text); Text("SQLite trên iPhone"); Text("Không cần đăng nhập Firebase để dùng dữ liệu trên máy.").font(.footnote) }.padding() }
-        case .matching: CRMEmpty(title:"Matching hai chiều",detail:"Đề xuất từ 70% và đáp ứng điều kiện bắt buộc. Điểm không phải xác suất giao dịch.").padding()
+        case .matching: MatchingView()
         }
     }
 }

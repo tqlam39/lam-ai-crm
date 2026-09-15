@@ -6,6 +6,7 @@ final class CRMStore: ObservableObject {
     @Published private(set) var data = Database()
     @Published private(set) var ready = false
     @Published private(set) var busy = false
+    @Published private(set) var revision = 0
     @Published var error: String?
     @Published var message: String?
     private var repository: SQLiteRepository?
@@ -31,7 +32,7 @@ final class CRMStore: ObservableObject {
         do {
             try change(&next); next.log(entity: entity, action: action)
             try await repository.save(next)
-            data = next; message = "Đã lưu trên iPhone"
+            data = next; revision += 1; message = "Đã lưu trên iPhone"
             await refreshReminders()
         } catch { self.error = error.localizedDescription; throw error }
     }

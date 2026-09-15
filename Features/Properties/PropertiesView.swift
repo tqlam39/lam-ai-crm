@@ -59,6 +59,7 @@ struct PropertyReadView:View {
     @Environment(\.dismiss) var dismiss
     let id:String
     @State private var remove = false
+    @State private var suggestions:[MatchPair] = []
     var property:CRMRecord?{store.data.properties.first{$0.id == id}}
     var body:some View {
         ScrollView {
@@ -66,6 +67,17 @@ struct PropertyReadView:View {
                 VStack(alignment:.leading,spacing:16) {
                     ScrollView(.horizontal){HStack{ForEach(Array(p["media.images"].array.enumerated()),id:\.offset){_,image in CRMImage(reference:image["url"].text).frame(width:290,height:210).clipped().clipShape(RoundedRectangle(cornerRadius:16))}}}
                     PropertySummary(property:p)
+                    CRMPanel {
+                        Text("Khách phù hợp từ 70%").font(.headline)
+                        if suggestions.isEmpty {Text("Chưa có khách phù hợp với các nhu cầu đang tìm.").foregroundStyle(.secondary)}
+                        ForEach(suggestions.prefix(3)) {pair in
+                            NavigationLink("\(pair.customer.title) · \(pair.result.score)%") {CustomerDetail(id:pair.customer.id)}
+                            Text(pair.result.reasons.joined(separator:" · ")).font(.caption)
+                            HStack {if let url = CustomerLogic.phone(pair.customer) {Link("Gọi khách",destination:url)};if let url = CustomerLogic.zalo(pair.customer) {Link("Zalo",destination:url)}}
+                            NavigationLink("Ghi chăm sóc / hẹn tiếp") {CareEditor(customerId:pair.customer.id,initialPropertyId:id)}
+                        }
+                        NavigationLink("Xem tất cả khách phù hợp") {MatchingView(propertyId:id)}
+                    }
                     CRMPanel{Text("Thông tin chi tiết").font(.headline);Text(p.text("details"));Text(p.text("legal.certificateStatus") == "RED_BOOK" ? "Sổ đỏ" : p.text("legal.certificateStatus") == "NO_CERTIFICATE" ? "Chưa có sổ" : "Pháp lý chưa cung cấp");Text(p.text("legal.note"))}
                     CRMPanel {
                         Text("Thông tin nội bộ").font(.headline);Text("Chủ: "+p.text("owner.name"));Text(p.text("owner.phone"));Text(p.text("note"))
@@ -80,6 +92,7 @@ struct PropertyReadView:View {
                 }.padding(18)
             }else{CRMEmpty(title:"Không tìm thấy BĐS").padding()}
         }.navigationTitle(property?.title ?? "Bất động sản").navigationBarTitleDisplayMode(.inline)
+        .task(id:store.revision) {let data = store.data,key = id;let found = await Task.detached{Matching.pairs(data,propertyId:key)}.value;if !Task.isCancelled {suggestions = found}}
         .confirmationDialog("Xóa BĐS? Công việc được giữ và gỡ liên kết sản phẩm.",isPresented:$remove,titleVisibility:.visible){Button("Xóa BĐS",role:.destructive){Task{do{try await store.commit(entity:id,action:"Xóa BĐS"){d in d.properties.removeAll{$0.id == id};for i in d.tasks.indices where d.tasks[i].text("propertyId") == id {d.tasks[i]["propertyId"] = .null}};dismiss()}catch{}}}}
     }
     private func contact(_ phone:String)->URL?{let p = phone.filter{$0.isNumber || $0 == "+"};return p.count >= 8 && p.count <= 16 ? URL(string:"tel:"+p) : nil}
