@@ -1,6 +1,13 @@
 import XCTest
 
 final class LaunchTests: XCTestCase {
+    func testAIConfigurationScreenOpens() {
+        let app = XCUIApplication();app.launch()
+        XCTAssertTrue(app.buttons["tab-AI"].waitForExistence(timeout:45));app.buttons["tab-AI"].tap()
+        XCTAssertTrue(app.buttons["API key / model AI"].waitForExistence(timeout:10));app.buttons["API key / model AI"].tap()
+        XCTAssertTrue(app.secureTextFields["API key"].waitForExistence(timeout:10))
+        XCTAssertTrue(app.buttons["Tải danh sách model"].exists)
+    }
     func testTaskCanBeCreatedFromQuickMenu() {
         let app = XCUIApplication();app.launch()
         XCTAssertTrue(app.buttons["quickAdd"].waitForExistence(timeout:45));app.buttons["quickAdd"].tap();app.buttons["Công việc / lịch hẹn"].tap()

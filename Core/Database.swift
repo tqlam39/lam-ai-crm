@@ -86,6 +86,14 @@ enum Validation {
     static func requirement(_ r: CRMRecord) throws {
         try require(!r.text("customerId").isEmpty, "Chọn khách hàng.")
         try require(["ACTIVE","PAUSED","FULFILLED"].contains(r.text("status")),"Trạng thái nhu cầu không hợp lệ.")
+        if r["transactionType"] != .null {try require(["SALE","RENT"].contains(r.text("transactionType")),"Giao dịch nhu cầu không hợp lệ.")}
+        for (key,allowed) in [("propertyTypes",propertyTypes),("directions",directions)] where r[key] != .null {
+            guard case .array(let items) = r[key],items.allSatisfy({allowed.contains($0.text)}) else {throw CRMError.invalid("Loại BĐS hoặc hướng nhu cầu không hợp lệ.")}
+        }
+        for key in ["provinceCities","wardCommunes","legalPreferences","semanticPreferences"] where r[key] != .null {
+            guard case .array(let items) = r[key],items.allSatisfy({if case .string = $0 {return true};return false}) else {throw CRMError.invalid("Khu vực / ưu tiên phải là danh sách văn bản.")}
+        }
+        if r["carAccess"] != .null {try require(r["carAccess"].bool != nil,"Điều kiện đường ô tô không hợp lệ.")}
         for key in ["priceMin","priceMax","widthMin","lengthMin","areaMin","areaMax","bedroomsMin"] where r[key] != .null {
             try require(r.number(key) != nil && (r.number(key) ?? -1) >= 0,"Thông tin giá / kích thước phải là số không âm hoặc bỏ trống.")
         }

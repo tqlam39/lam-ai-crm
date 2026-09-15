@@ -24,10 +24,15 @@ enum ImageTextReader {
     private var recognition:SFSpeechRecognitionTask?
     private var request:SFSpeechAudioBufferRecognitionRequest?
     private var tapped = false
+    private var starting = false
+    private var generation = 0
     func start() async {
-        guard !recording else{return}
+        guard !recording && !starting else{return}
+        starting = true;defer{starting = false};generation += 1;let ticket = generation
         let allowed = await withCheckedContinuation {continuation in SFSpeechRecognizer.requestAuthorization{continuation.resume(returning:$0 == .authorized)}}
+        guard generation == ticket else{return}
         let microphone = await AVAudioApplication.requestRecordPermission()
+        guard generation == ticket else{return}
         guard allowed && microphone else {error = "Cần quyền micro và nhận dạng giọng nói. Có thể nhập bằng bàn phím.";return}
         guard let recognizer = SFSpeechRecognizer(locale:Locale(identifier:"vi-VN")),recognizer.isAvailable else {error = "Nhận dạng tiếng Việt chưa khả dụng. Thử lại khi có mạng.";return}
         do {
@@ -47,6 +52,7 @@ enum ImageTextReader {
         } catch {self.error = "Không bắt đầu được ghi âm. Kiểm tra micro.";stop()}
     }
     func stop() {
+        generation += 1
         recording = false;engine.stop();if tapped {engine.inputNode.removeTap(onBus:0);tapped = false}
         request?.endAudio();request = nil;let task = recognition;recognition = nil;task?.cancel()
         try? AVAudioSession.sharedInstance().setActive(false,options:.notifyOthersOnDeactivation)
