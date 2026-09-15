@@ -1,6 +1,14 @@
 import XCTest
 
 final class LaunchTests: XCTestCase {
+    func testTaskCanBeCreatedFromQuickMenu() {
+        let app = XCUIApplication();app.launch()
+        XCTAssertTrue(app.buttons["quickAdd"].waitForExistence(timeout:45));app.buttons["quickAdd"].tap();app.buttons["Công việc / lịch hẹn"].tap()
+        XCTAssertTrue(app.buttons["add-task"].waitForExistence(timeout:10));app.buttons["add-task"].tap()
+        let title = app.textFields["task-title"];XCTAssertTrue(title.waitForExistence(timeout:10));title.tap();title.typeText("Goi khach iOS")
+        app.buttons["save-task"].tap()
+        XCTAssertTrue(app.buttons["Goi khach iOS"].waitForExistence(timeout:10),app.debugDescription)
+    }
     func testCustomerCanBeSavedAndProfileReopened() {
         let app = XCUIApplication();app.launch()
         XCTAssertTrue(app.buttons["tab-Khách"].waitForExistence(timeout:45));app.buttons["tab-Khách"].tap()

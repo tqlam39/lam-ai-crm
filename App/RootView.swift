@@ -11,6 +11,7 @@ enum CRMRoute: String, Hashable, CaseIterable {
 
 struct RootView: View {
     @EnvironmentObject var store: CRMStore
+    @Environment(\.scenePhase) private var scenePhase
     @State private var tab: CRMTab = .home
     @State private var path: [CRMRoute] = []
     @State private var quick = false
@@ -35,7 +36,7 @@ struct RootView: View {
             .toolbarColorScheme(.dark,for:.navigationBar)
             .toolbar {
                 ToolbarItem(placement:.topBarTrailing) {
-                    Menu { ForEach(CRMRoute.allCases,id:\.self) { route in Button(route.rawValue) { path.append(route) } } } label: { Image(systemName:"line.3.horizontal").accessibilityLabel("Các chức năng") }
+                    Menu { ForEach(CRMRoute.allCases,id:\.self) { route in Button(route.rawValue) { path.append(route) } } } label: { Image(systemName:"line.3.horizontal").foregroundStyle(.white).accessibilityLabel("Các chức năng") }
                 }
             }
             .navigationDestination(for:CRMRoute.self) { route in
@@ -51,6 +52,7 @@ struct RootView: View {
             }
         }
         .tint(CRMStyle.green)
+        .onChange(of:scenePhase) {_,phase in if phase == .active {Task {await store.refreshReminders()}}}
         .sheet(isPresented:$quick) {
             NavigationStack {
                 List {
@@ -71,7 +73,7 @@ struct RootView: View {
         switch route {
         case .newProperty: PropertyEditor(record:PropertyLogic.newDraft())
         case .newCustomer: CustomerEditor(customer:CustomerLogic.newCustomer(),needs:[])
-        case .tasks,.calendar,.urgent: RecordList(collection:"tasks",urgent:route == .urgent)
+        case .tasks,.calendar,.urgent: TasksView(calendar:route == .calendar,urgent:route == .urgent)
         case .requirements: RequirementsView()
         case .search: SearchView()
         case .settings,.reports: ScrollView { CRMPanel { Text(store.data.settings["brand"].text).font(.headline); Text(store.data.settings["phone"].text); Text("SQLite trên iPhone"); Text("Không cần đăng nhập Firebase để dùng dữ liệu trên máy.").font(.footnote) }.padding() }
@@ -99,6 +101,16 @@ struct HomeOverview: View {
                     Button("Việc cần gấp / quá hạn") { navigate(.urgent) }
                     Button("Lịch hẹn") { navigate(.calendar) }
                     Button("Matching hai chiều") { navigate(.matching) }
+                }
+                Text("Khách đang chờ chăm sóc").font(.headline)
+                let pending = TaskLogic.pending(store.data)
+                if pending.isEmpty {Text("Chưa có khách cần chăm sóc.").foregroundStyle(.secondary)}
+                ForEach(pending.prefix(10)) {c in
+                    NavigationLink {CustomerDetail(id:c.id)} label:{CRMPanel {
+                        Text(c.title).font(.headline);Text(c.text("status"))
+                        let tasks = store.data.tasks.filter{$0.text("customerId") == c.id && $0.text("status") == "TODO"}
+                        Text(tasks.contains{TaskLogic.overdue($0)} ? "Có lịch quá hạn" : tasks.isEmpty ? "Chưa có lịch chăm sóc" : "\(tasks.count) việc đang chờ").foregroundStyle(tasks.contains{TaskLogic.overdue($0)} ? .red : CRMStyle.green)
+                    }}.buttonStyle(.plain)
                 }
                 Text("Bất động sản vừa cập nhật").font(.headline)
                 if store.data.properties.isEmpty { CRMEmpty(title:"Bắt đầu quỹ hàng đầu tiên",detail:"Nhấn + để chọn cách nhập dữ liệu.") }

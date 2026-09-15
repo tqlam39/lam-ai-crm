@@ -20,6 +20,7 @@ final class CRMStore: ObservableObject {
                 repository = repo; data = loaded
             } catch { failedToLoad = true; self.error = "Không mở được database. Dữ liệu được giữ nguyên. \(error.localizedDescription)" }
             ready = true
+            await refreshReminders()
         }
     }
     func commit(entity: String, action: String, change: (inout Database) throws -> Void) async throws {
@@ -31,6 +32,10 @@ final class CRMStore: ObservableObject {
             try change(&next); next.log(entity: entity, action: action)
             try await repository.save(next)
             data = next; message = "Đã lưu trên iPhone"
+            await refreshReminders()
         } catch { self.error = error.localizedDescription; throw error }
+    }
+    func refreshReminders() async {
+        if let warning = await ReminderService.shared.refresh(tasks:data.tasks) {message = warning}
     }
 }
