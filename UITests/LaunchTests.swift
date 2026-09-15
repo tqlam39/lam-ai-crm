@@ -1,6 +1,20 @@
 import XCTest
 
 final class LaunchTests: XCTestCase {
+    func testCustomerCanBeSavedAndProfileReopened() {
+        let app = XCUIApplication();app.launch()
+        XCTAssertTrue(app.buttons["tab-Khách"].waitForExistence(timeout:45));app.buttons["tab-Khách"].tap()
+        app.buttons["add-customer"].tap()
+        let name = app.textFields["customer-name"]
+        XCTAssertTrue(name.waitForExistence(timeout:10));name.tap();name.typeText("Khach iOS")
+        app.buttons["save-customer"].tap()
+        XCTAssertTrue(app.navigationBars["Khách hàng"].waitForExistence(timeout:10))
+        app.terminate();app.launch()
+        XCTAssertTrue(app.buttons["tab-Khách"].waitForExistence(timeout:45));app.buttons["tab-Khách"].tap()
+        let customer = app.buttons.matching(NSPredicate(format:"label CONTAINS %@","Khach iOS")).firstMatch
+        XCTAssertTrue(customer.waitForExistence(timeout:10),app.debugDescription);customer.tap()
+        XCTAssertTrue(app.navigationBars["Khach iOS"].waitForExistence(timeout:10))
+    }
     func testNativeScreenActuallyAppears() {
         let app = XCUIApplication()
         app.launch()

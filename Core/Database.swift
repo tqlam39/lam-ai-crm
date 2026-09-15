@@ -85,6 +85,11 @@ enum Validation {
     }
     static func requirement(_ r: CRMRecord) throws {
         try require(!r.text("customerId").isEmpty, "Chọn khách hàng.")
+        try require(["ACTIVE","PAUSED","FULFILLED"].contains(r.text("status")),"Trạng thái nhu cầu không hợp lệ.")
+        for key in ["priceMin","priceMax","widthMin","lengthMin","areaMin","areaMax","bedroomsMin"] where r[key] != .null {
+            try require(r.number(key) != nil && (r.number(key) ?? -1) >= 0,"Thông tin giá / kích thước phải là số không âm hoặc bỏ trống.")
+        }
+        if let beds = r.number("bedroomsMin") {try require(beds.rounded() == beds,"Số phòng ngủ phải là số nguyên.")}
         if let min = r.number("priceMin") { try require(min >= 0, "Ngân sách từ không âm.") }
         if let max = r.number("priceMax") { try require(max > 0, "Ngân sách đến phải lớn hơn 0.") }
         if let min = r.number("priceMin"), let max = r.number("priceMax") { try require(min <= max, "Ngân sách từ không lớn hơn đến.") }

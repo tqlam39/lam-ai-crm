@@ -5,7 +5,7 @@ enum CRMTab: String, CaseIterable { case home = "Nhà", properties = "BĐS", cus
     var title: String { switch self { case .home: return "LẮM AI CRM"; case .properties: return "Quỹ bất động sản"; case .customers: return "Khách hàng"; case .ai: return "AI Copilot" } }
 }
 enum CRMRoute: String, Hashable, CaseIterable {
-    case newProperty = "Thêm BĐS"
+    case newProperty = "Thêm BĐS", newCustomer = "Thêm khách"
     case tasks = "Công việc", urgent = "Việc cần gấp", calendar = "Lịch hẹn", matching = "Matching hai chiều", settings = "Cài đặt", reports = "Báo cáo & sao lưu", search = "Tìm kiếm", requirements = "Nhu cầu khách"
 }
 
@@ -22,7 +22,7 @@ struct RootView: View {
                     switch tab {
                     case .home: HomeOverview { path.append($0) }
                     case .properties: PropertiesView()
-                    case .customers: RecordList(collection:"customers")
+                    case .customers: CustomersView()
                     case .ai: CRMEmpty(title:"Trợ lý bất động sản",detail:"Nhập tin, nhu cầu và hỏi dữ liệu CRM bằng tiếng Việt.").padding()
                     }
                 }
@@ -55,7 +55,7 @@ struct RootView: View {
             NavigationStack {
                 List {
                     Button("BĐS thủ công") { quick = false; tab = .properties; path = [.newProperty] }
-                    Button("Khách hàng") { quick = false; tab = .customers; path = [] }
+                    Button("Khách hàng") { quick = false; tab = .customers; path = [.newCustomer] }
                     Button("Nhu cầu khách") { quick = false; path.append(.requirements) }
                     Button("Công việc / lịch hẹn") { quick = false; path.append(.tasks) }
                     Button("Dán tin / ảnh / giọng nói → AI") { quick = false; tab = .ai; path = [] }
@@ -70,8 +70,9 @@ struct RootView: View {
     @ViewBuilder private func routeView(_ route:CRMRoute) -> some View {
         switch route {
         case .newProperty: PropertyEditor(record:PropertyLogic.newDraft())
+        case .newCustomer: CustomerEditor(customer:CustomerLogic.newCustomer(),needs:[])
         case .tasks,.calendar,.urgent: RecordList(collection:"tasks",urgent:route == .urgent)
-        case .requirements: RecordList(collection:"requirements")
+        case .requirements: RequirementsView()
         case .search: SearchView()
         case .settings,.reports: ScrollView { CRMPanel { Text(store.data.settings["brand"].text).font(.headline); Text(store.data.settings["phone"].text); Text("SQLite trên iPhone"); Text("Không cần đăng nhập Firebase để dùng dữ liệu trên máy.").font(.footnote) }.padding() }
         case .matching: CRMEmpty(title:"Matching hai chiều",detail:"Đề xuất từ 70% và đáp ứng điều kiện bắt buộc. Điểm không phải xác suất giao dịch.").padding()
