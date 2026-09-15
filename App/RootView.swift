@@ -76,7 +76,8 @@ struct RootView: View {
         case .tasks,.calendar,.urgent: TasksView(calendar:route == .calendar,urgent:route == .urgent)
         case .requirements: RequirementsView()
         case .search: SearchView()
-        case .settings,.reports: ScrollView { CRMPanel { Text(store.data.settings["brand"].text).font(.headline); Text(store.data.settings["phone"].text); Text("SQLite trên iPhone"); Text("Không cần đăng nhập Firebase để dùng dữ liệu trên máy.").font(.footnote) }.padding() }
+        case .settings: SettingsView()
+        case .reports: BackupView()
         case .matching: MatchingView()
         }
     }

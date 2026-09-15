@@ -11,7 +11,8 @@
 | 7 | Đạt | Run 34931139434: build +14 unit +5 UI tests pass, Simulator launch; nhắc lịch cần kiểm tra trên iPhone thật khi ký app |
 | 8 | Đạt kiểm thử tự động | Run 34975348809: build + unit/UI pass; provider dùng mock, chưa kiểm tra key thật/camera/micro trên iPhone vật lý |
 | 9 | Đạt | Run 34976369225: build + golden parity/boundary/dedup tests và UI regression pass |
-| 10 | Đang build/test | Copilot hiểu câu hỏi thành bộ lọc, kết quả lấy từ database thật, không có công cụ sửa/xóa |
-| 11–15 | Chưa triển khai | Chưa được coi là hoàn thành |
+| 10 | Đạt | Run 34977670531: build/test/Simulator pass sau khi sửa lỗi biến error trong màn hình AI |
+| 11 | Đang build/test | JSON Files/Drive, ảnh nhúng, preview restore, CSV và cấu hình |
+| 12–15 | Chưa triển khai | Chưa được coi là hoàn thành |
 
 Không có dữ liệu thật bị sửa hoặc chuyển tự động. Chưa có bản iOS để cài iPhone.
