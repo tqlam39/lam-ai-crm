@@ -90,6 +90,7 @@ struct CustomerDetail:View {
                         Text(c.title).font(.title2.bold());Text(c.text("status"));Text(c.text("phone"));Text(c.text("note"))
                         HStack {if let url = CustomerLogic.phone(c) {Link("Gọi khách",destination:url)};Spacer();if let url = CustomerLogic.zalo(c) {Link("Zalo",destination:url)}}
                         NavigationLink("Sửa thông tin / nhu cầu") {CustomerEditor(customer:c,needs:store.data.requirements.filter{$0.text("customerId") == id})}
+                        NavigationLink("AI tóm tắt hồ sơ") {AIWritingView(title:"Tóm tắt khách",instruction:"Tóm tắt nhu cầu và ghi chú khách hàng cho người môi giới, không suy đoán khả năng tài chính hoặc thông tin chưa cung cấp.",input:.object(["customer":c.value,"requirements":.array(store.data.requirements.filter{$0.text("customerId") == id}.map(\.value))]))}
                     }
                     Section("Nhu cầu tìm BĐS") {
                         NavigationLink("BĐS phù hợp từ 70%") {MatchingView(customerId:id)}

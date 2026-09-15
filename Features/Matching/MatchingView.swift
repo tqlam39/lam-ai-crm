@@ -18,6 +18,7 @@ struct MatchingView:View {
                     Text(CRMStyle.money(pair.property.number("price.amount") ?? 0))
                     NavigationLink("Khách: "+pair.customer.title) {CustomerDetail(id:pair.customer.id)}
                     Text(pair.result.reasons.joined(separator:" · ")).font(.subheadline)
+                    NavigationLink("AI giải thích mức phù hợp") {AIWritingView(title:"Giải thích so khớp",instruction:"Giải thích điểm và lý do được cung cấp bằng tiếng Việt; không thay đổi điểm hoặc bỏ qua điều kiện bắt buộc.",input:.object(["score":.number(Decimal(pair.result.score)),"reasons":.array(pair.result.reasons.map(JSONValue.string))]))}
                     HStack {if let url = CustomerLogic.phone(pair.customer) {Link("Gọi",destination:url)};if let url = CustomerLogic.zalo(pair.customer) {Link("Zalo",destination:url)}}
                     NavigationLink("Ghi chăm sóc / hẹn tiếp") {CareEditor(customerId:pair.customer.id,initialPropertyId:pair.property.id)}
                 }

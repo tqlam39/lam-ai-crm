@@ -87,6 +87,7 @@ struct PropertyReadView:View {
                     }
                     if p.text("status") == "SOLD" {CRMPanel{Text("Đã bán: "+p.text("soldInfo.soldAt")).font(.headline);Text(CRMStyle.money(p.number("soldInfo.actualSoldPrice") ?? 0));Text(p.text("soldInfo.note"))}}
                     NavigationLink("Chỉnh sửa BĐS"){PropertyEditor(record:p)}.buttonStyle(.borderedProminent)
+                    NavigationLink("AI viết tin đăng") {AIWritingView(title:"Soạn tin đăng",instruction:"Viết tin BĐS bằng tiếng Việt. Không tiết lộ chủ sở hữu. Không có dữ liệu thì không viết về mục đó.",input:PublicProperty.payload(p))}
                     CRMPanel{Text("Lịch sử").font(.headline);ForEach(store.data.activities.filter{$0.text("entityId") == id}){a in Text(a.text("action"));Text(a.text("at")).font(.caption).foregroundStyle(.secondary)}}
                     Button("Xóa BĐS",role:.destructive){remove = true}
                 }.padding(18)

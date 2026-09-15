@@ -2,6 +2,11 @@ import XCTest
 @testable import LamAICRM
 
 final class CopilotTests:XCTestCase {
+    func testPublicListingPayloadExcludesPrivateOwnerAndNotes() {
+        let p = CRMRecord(["title":.string("Nhà"),"owner":.object(["phone":.string("private-phone")]),"note":.string("private-note"),"details":.string("private details")])
+        let payload = PublicProperty.payload(p)
+        XCTAssertEqual(payload["title"],.string("Nhà"));XCTAssertEqual(payload["owner"],.null);XCTAssertEqual(payload["note"],.null);XCTAssertEqual(payload["details"],.null)
+    }
     func testRetrievalUsesActualRecordsAndBudget() {
         var d = Database();let p = CRMRecord(["id":.string("real"),"title":.string("Nhà Phú Lợi"),"type":.string("HOUSE"),"status":.string("ACTIVE"),"price":.object(["amount":.number(1_500_000_000)]),"location":.object(["wardCommune":.string("Phường Phú Lợi")])]);d.properties = [p]
         var query:JSONValue = .object(["intent":.string("properties"),"inventedId":.string("fake"),"filters":.object(["wardCommunes":.array([.string("Phú Lợi")]),"priceMax":.number(2_000_000_000)])])
