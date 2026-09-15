@@ -96,6 +96,7 @@ struct CustomerDetail:View {
                         NavigationLink("Thêm nhu cầu") {RequirementEditor(record:CustomerLogic.newNeed(customerId:id))}
                     }
                     Section("Chăm sóc / lịch hẹn") {
+                        NavigationLink("Ghi kết quả / hẹn chăm sóc tiếp") {CareEditor(customerId:id)}
                         ForEach(store.data.tasks.filter{$0.text("customerId") == id}) {t in VStack(alignment:.leading) {Text(t.title).font(.headline);Text(t.text("note"));Text(t.text("dueAt")).font(.caption);Text(t.text("status"))}}
                     }
                     Section("Lịch sử") {ForEach(store.data.activities.filter{$0.text("entityId") == id}) {a in VStack(alignment:.leading){Text(a.text("action"));Text(a.text("at")).font(.caption).foregroundStyle(.secondary)}}}

@@ -2,6 +2,19 @@ import XCTest
 @testable import LamAICRM
 
 final class CustomerTests:XCTestCase {
+    func testCareValidatesBeforeChangingAndCompletesOnlySelectedTask() throws {
+        var d = Database();var c = CustomerLogic.newCustomer();c["name"] = .string("A")
+        try CustomerLogic.save(c,needs:[],into:&d)
+        d.tasks = [CRMRecord(["id":.string("todo"),"title":.string("Gọi"),"customerId":.string(c.id),"status":.string("TODO")])]
+        let before = d;let now = Date()
+        XCTAssertThrowsError(try CustomerLogic.recordCare(customerId:c.id,type:"CALL",note:"",nextAt:nil,into:&d,now:now));XCTAssertEqual(d,before)
+        XCTAssertThrowsError(try CustomerLogic.recordCare(customerId:c.id,type:"CALL",note:"Đã gọi",nextAt:now.addingTimeInterval(-1),into:&d,now:now));XCTAssertEqual(d,before)
+        try CustomerLogic.recordCare(customerId:c.id,type:"CALL",note:"Đã gọi",nextAt:now.addingTimeInterval(3600),completeTaskId:"todo",into:&d,now:now)
+        XCTAssertEqual(d.tasks.count,2);XCTAssertEqual(d.tasks.first{$0.id == "todo"}?.text("status"),"DONE")
+        XCTAssertEqual(d.tasks.first{$0.text("status") == "TODO"}?.text("type"),"FOLLOW_UP")
+        let after = d
+        XCTAssertThrowsError(try CustomerLogic.recordCare(customerId:c.id,type:"CALL",note:"Lặp",nextAt:nil,completeTaskId:"todo",into:&d,now:now));XCTAssertEqual(d,after)
+    }
     func testBlankNeedsAndRepeatedSaveDoNotDuplicateCustomer() throws {
         var d = Database();var c = CustomerLogic.newCustomer();c["name"] = .string("Khách A")
         let blank = CustomerLogic.newNeed(customerId:c.id)
