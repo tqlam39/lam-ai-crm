@@ -34,6 +34,10 @@ final class LaunchTests: XCTestCase {
         app.terminate();app.launch()
         XCTAssertTrue(app.buttons["tab-BĐS"].waitForExistence(timeout:45));app.buttons["tab-BĐS"].tap()
         app.switches["Bản nháp"].tap()
-        XCTAssertTrue(app.staticTexts["Ban nhap iOS"].waitForExistence(timeout:10))
+        let draft = app.buttons.matching(NSPredicate(format:"label CONTAINS %@", "Ban nhap iOS")).firstMatch
+        XCTAssertTrue(draft.waitForExistence(timeout:10), app.debugDescription)
+        draft.tap()
+        XCTAssertTrue(app.textFields["property-title"].waitForExistence(timeout:10))
+        XCTAssertEqual(app.textFields["property-title"].value as? String,"Ban nhap iOS")
     }
 }

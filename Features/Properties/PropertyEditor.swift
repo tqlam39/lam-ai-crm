@@ -29,7 +29,7 @@ struct PropertyEditor: View {
     var body:some View {
         Form {
             Section("Thông tin cơ bản") {
-                TextField("Tiêu đề *",text:text("title")).accessibilityIdentifier("property-title")
+                TextField("Tiêu đề *",text:text("title")).autocorrectionDisabled().accessibilityIdentifier("property-title")
                 choices("Loại BĐS *","type",CRMStyle.types)
                 choices("Giao dịch *","transactionType",["SALE":"Mua bán","RENT":"Cho thuê"])
                 choices("Trạng thái *","status",CRMStyle.statuses)
