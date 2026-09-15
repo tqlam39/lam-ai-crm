@@ -10,7 +10,8 @@
 | 6 | Đạt | Run 34930545110: build + unit/UI tests pass; lưu/mở lại hồ sơ, nhu cầu tùy chọn, chăm sóc, xóa gỡ liên kết |
 | 7 | Đạt | Run 34931139434: build +14 unit +5 UI tests pass, Simulator launch; nhắc lịch cần kiểm tra trên iPhone thật khi ký app |
 | 8 | Đạt kiểm thử tự động | Run 34975348809: build + unit/UI pass; provider dùng mock, chưa kiểm tra key thật/camera/micro trên iPhone vật lý |
-| 9 | Đang build/test | So khớp hai chiều với golden fixtures từ nguồn và ngưỡng >=70% |
-| 10–15 | Chưa triển khai | Chưa được coi là hoàn thành |
+| 9 | Đạt | Run 34976369225: build + golden parity/boundary/dedup tests và UI regression pass |
+| 10 | Đang build/test | Copilot hiểu câu hỏi thành bộ lọc, kết quả lấy từ database thật, không có công cụ sửa/xóa |
+| 11–15 | Chưa triển khai | Chưa được coi là hoàn thành |
 
 Không có dữ liệu thật bị sửa hoặc chuyển tự động. Chưa có bản iOS để cài iPhone.

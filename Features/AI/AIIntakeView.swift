@@ -18,6 +18,7 @@ struct AIIntakeView:View {
     var body:some View {
         Form {
             Section {
+                NavigationLink("Hỏi CRM bằng ngôn ngữ tự nhiên") {CopilotView()}
                 NavigationLink("API key / model AI") {AISettingsView()}
                 Picker("Trích xuất",selection:$kind) {Text("Bất động sản").tag("property");Text("Nhu cầu khách").tag("need")}.pickerStyle(.segmented)
                 Text("Nội dung gửi tới dịch vụ AI bạn chọn. Kiểm tra và chỉnh sửa kết quả trước khi lưu.").font(.footnote)
