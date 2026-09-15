@@ -37,6 +37,6 @@ struct CopilotView:View {
             let data = store.data
             let result = await Task.detached{Copilot.search(query,in:data,question:text)}.value
             history.append(result)
-        }catch{error = error.localizedDescription}}
+        }catch{self.error = error.localizedDescription}}
     }
 }
